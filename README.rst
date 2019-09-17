@@ -31,7 +31,7 @@ Overview
     :alt: Requirements Status
     :target: https://requires.io/github/erpbrasil/erpbrasil.transmissao/requirements/?branch=master
 
-.. |codecov| image:: https://codecov.io/github/erpbrasil/erpbrasil.transmissao/coverage.svg?branch=master
+.. |codecov| image:: https://codecov.io/gh/erpbrasil/erpbrasil.transmissao/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
     :target: https://codecov.io/github/erpbrasil/erpbrasil.transmissao
 
@@ -39,9 +39,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/erpbrasil.transmissao
 
-.. |commits-since| image:: https://img.shields.io/github.com/commits-since/erpbrasil/erpbrasil.transmissao/v0.0.0.svg
+.. |commits-since| image:: https://img.shields.io/github.com/commits-since/erpbrasil/erpbrasil.transmissao/v0.0.0..svg
     :alt: Commits since latest release
-    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v0.0.0...master
+    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v0.0.0....master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/erpbrasil.transmissao.svg
     :alt: PyPI Wheel
