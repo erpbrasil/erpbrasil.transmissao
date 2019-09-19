@@ -27,8 +27,8 @@ BH = 'https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl'
 MARINGA = 'https://isseteste.maringa.pr.gov.br/ws/?wsdl'
 
 
-
 class Tests(TestCase):
+    """ Rodar este teste muitas vezes pode bloquear o seu IP"""
 
     def setUp(self):
         certificado_nfe_caminho = os.environ.get(
@@ -90,10 +90,10 @@ class Tests(TestCase):
             self.transmissao.cliente(BH).service, 'RecepcionarLoteRps')
         )
         self.assertTrue(hasattr(
-            self.transmissao.cliente(SIMPLISSWEB).service, 'RecepcionarLoteRps')
+            self.transmissao.cliente(SIMPLISSWEB).service,
+            'RecepcionarLoteRps')
         )
         self.assertTrue(hasattr(
             self.transmissao.cliente(MARINGA).service, 'EnviarLoteRps')
         )
         # print(dir(self.transmissao.cliente(PETROPOLIS).service))
-
