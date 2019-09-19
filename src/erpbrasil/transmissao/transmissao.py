@@ -30,11 +30,11 @@ class TransmissaoSOAP(Transmissao):
     def post(self):
         pass
 
-    def cliente(self, url):
+    def cliente(self, url, verify=False):
         with ArquivoCertificado(self.certificado, 'w') as (key, cert):
             session = Session()
             session.cert = (cert, key)
-            session.verify = False
+            session.verify = verify
             transport = Transport(session=session)
             return Client(url, transport=transport)
 
