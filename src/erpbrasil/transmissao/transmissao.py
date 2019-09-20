@@ -33,7 +33,7 @@ class TransmissaoSOAP(Transmissao):
     def cliente(self, url, verify=False):
         with ArquivoCertificado(self.certificado, 'w') as (key, cert):
             session = Session()
-            session.cert = (cert, key)
+            session.cert = (key, cert)
             session.verify = verify
             transport = Transport(session=session)
             return Client(url, transport=transport)
