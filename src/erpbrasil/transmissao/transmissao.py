@@ -8,6 +8,7 @@ from erpbrasil.assinatura.certificado import Certificado
 from requests import Session
 from zeep import Client
 from zeep.transports import Transport
+from zeep.cache import SqliteCache
 
 ABC = abc.ABCMeta('ABC', (object,), {})
 
@@ -24,8 +25,15 @@ class Transmissao(ABC):
 
 class TransmissaoSOAP(Transmissao):
 
-    def __init__(self, certificado):
+    def __init__(self, certificado,
+                 cache=SqliteCache(path='/tmp/sqlite.db', timeout=60)):
+        """
+        :param certificado: erpbrasil.assinatura.certificado
+        :param cache: O cache torna as requisições mais rápidas entretanto,
+        pode causar problemas em caso de troca de parametros dos webservices
+        """
         self.certificado = certificado
+        self.cache = cache
 
     def post(self):
         pass
@@ -35,7 +43,8 @@ class TransmissaoSOAP(Transmissao):
             session = Session()
             session.cert = (key, cert)
             session.verify = verify
-            transport = Transport(session=session)
+
+            transport = Transport(session=session, cache=self.cache)
             return Client(url, transport=transport)
 
 
