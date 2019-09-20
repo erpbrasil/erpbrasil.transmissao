@@ -7,6 +7,7 @@ from erpbrasil.assinatura.certificado import ArquivoCertificado
 from erpbrasil.assinatura.certificado import Certificado
 from requests import Session
 from zeep import Client
+from requests.auth import HTTPBasicAuth
 from zeep.transports import Transport
 from zeep.cache import SqliteCache
 
@@ -18,8 +19,13 @@ class Transmissao(ABC):
     Classe abstrata responsavel por definir os metodos e logica das classes
     de transmissao com os webservices.
     """
+
     @abc.abstractmethod
     def post(self):
+        pass
+
+    @abc.abstractmethod
+    def cliente(self):
         pass
 
 
@@ -53,3 +59,7 @@ class TransmissaoHTTP(Transmissao):
     def post(self):
         pass
 
+    def cliente(self, url, user, password, auth=HTTPBasicAuth):
+        session = Session()
+        session.auth = auth(user, password)
+        return Client(url, transport=Transport(session=session))
