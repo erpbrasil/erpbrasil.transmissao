@@ -4,4 +4,5 @@ import logging
 
 logging.getLogger('erpbrasil.transmissao').addHandler(logging.NullHandler())
 
-from .transmissao import TransmissaoSOAP
+from erpbrasil.transmissao.transmissao import TransmissaoSOAP  # noqa: F401
+
