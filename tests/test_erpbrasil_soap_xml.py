@@ -73,7 +73,7 @@ class Tests(TestCase):
             session = Session()
             session.cert = (key, cert)
             session.verify = False
-            transmissao = TransmissaoSOAP(self.certificado, session)
+            transmissao = TransmissaoSOAP(self.certificado)
 
             #
             # NFE
@@ -95,7 +95,7 @@ class Tests(TestCase):
             session = Session()
             session.cert = (key, cert)
             session.verify = False
-            transmissao = TransmissaoSOAP(self.certificado, session)
+            transmissao = TransmissaoSOAP(self.certificado)
             #
             # CTE
             #
@@ -125,7 +125,7 @@ class Tests(TestCase):
     #     session = Session()
     #     session.cert = (key, cert)
     #     session.verify = False
-    #     transmissao = TransmissaoSOAP(self.certificado, session)
+    #     transmissao = TransmissaoSOAP(self.certificado)
     #
     # GNRE
     #
@@ -170,7 +170,7 @@ class Tests(TestCase):
             session = Session()
             session.cert = (key, cert)
             session.verify = False
-            transmissao = TransmissaoSOAP(self.certificado, session)
+            transmissao = TransmissaoSOAP(self.certificado)
             #
             # MDFE
             #

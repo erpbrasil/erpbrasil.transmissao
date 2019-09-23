@@ -1,7 +1,9 @@
 # coding=utf-8
 # Copyright (C) 2019  Luis Felipe Mileo - KMEE
 
+import os
 import abc
+import tempfile
 
 from erpbrasil.assinatura.certificado import ArquivoCertificado
 from erpbrasil.assinatura.certificado import Certificado
@@ -31,15 +33,15 @@ class Transmissao(ABC):
 
 class TransmissaoSOAP(Transmissao):
 
-    def __init__(self, certificado,
-                 cache=SqliteCache(path='/tmp/sqlite.db', timeout=60)):
+    def __init__(self, certificado, cache=True):
         """
         :param certificado: erpbrasil.assinatura.certificado
         :param cache: O cache torna as requisições mais rápidas entretanto,
         pode causar problemas em caso de troca de parametros dos webservices
         """
+        if cache:
+            self._cache = self.get_cache()
         self.certificado = certificado
-        self.cache = cache
 
     def post(self):
         pass
@@ -53,6 +55,11 @@ class TransmissaoSOAP(Transmissao):
             transport = Transport(session=session, cache=self.cache)
             return Client(url, transport=transport)
 
+    @staticmethod
+    def get_cache():
+        temp_dir = tempfile.gettempdir()
+        cache_file = os.path.join(temp_dir, 'erpbrasil_transmissao.db')
+        return SqliteCache(path=cache_file, timeout=60)
 
 class TransmissaoHTTP(Transmissao):
 
