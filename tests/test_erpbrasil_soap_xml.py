@@ -1,11 +1,12 @@
 # coding=utf-8
 
-import os
 import collections
-
+import os
 from unittest import TestCase
-from requests import Session
+
 from erpbrasil.assinatura.certificado import Certificado
+from requests import Session
+
 from erpbrasil.transmissao import TransmissaoSOAP
 
 Requisicao = collections.namedtuple(

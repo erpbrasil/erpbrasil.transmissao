@@ -1,22 +1,20 @@
 # coding=utf-8
 # Copyright (C) 2019  Luis Felipe Mileo - KMEE
 
-import os
 import abc
+import os
 import tempfile
 from contextlib import contextmanager
-from lxml import etree
 
-from erpbrasil.assinatura.certificado import ArquivoCertificado
-from erpbrasil.assinatura.certificado import Certificado
 import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
+from erpbrasil.assinatura.certificado import ArquivoCertificado
+from lxml import etree
 from requests import Session
-from zeep import Client
 from requests.auth import HTTPBasicAuth
-from zeep.transports import Transport
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from zeep import Client
 from zeep.cache import SqliteCache
+from zeep.transports import Transport
 
 ABC = abc.ABCMeta('ABC', (object,), {})
 
@@ -38,8 +36,8 @@ class Transmissao(ABC):
 
 class TransmissaoSOAP(Transmissao):
 
-    def __init__(self, certificado, session, cache=True, disable_warnings=True
-                 , raw_response=True):
+    def __init__(self, certificado, session=Session(), cache=True,
+                 disable_warnings=True, raw_response=True):
         """
         :param certificado: erpbrasil.assinatura.certificado
         :param cache: O cache torna as requisições mais rápidas entretanto,
@@ -65,14 +63,17 @@ class TransmissaoSOAP(Transmissao):
             )
 
     @contextmanager
-    def cliente(self, url, verify=False):
+    def cliente(self, url, verify=False, service_name=None, port_name=None):
         with ArquivoCertificado(self.certificado, 'w') as (key, cert):
             self.desativar_avisos()
             session = Session()
             session.cert = (key, cert)
             session.verify = verify
             transport = Transport(session=session, cache=self._cache)
-            self._cliente = Client(url, transport=transport)
+            self._cliente = Client(
+                url, transport=transport, service_name=service_name,
+                port_name=port_name
+            )
             yield self._cliente
             self._cliente = False
 

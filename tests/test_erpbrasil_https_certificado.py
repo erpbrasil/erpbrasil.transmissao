@@ -4,6 +4,7 @@ import os
 from unittest import TestCase
 
 from erpbrasil.assinatura.certificado import Certificado
+
 from erpbrasil.transmissao import TransmissaoSOAP
 
 NFE = 'https://hom.sefazvirtual.fazenda.gov.br/NFeStatusServico4/NFeStatusServico4.asmx?wsdl'  # noqa
