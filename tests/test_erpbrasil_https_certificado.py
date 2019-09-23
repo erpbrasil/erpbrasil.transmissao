@@ -8,7 +8,7 @@ from erpbrasil.transmissao import TransmissaoSOAP
 
 NFE = 'https://hom.sefazvirtual.fazenda.gov.br/NFeStatusServico4/NFeStatusServico4.asmx?wsdl'  # noqa
 GNRE = 'http://www.testegnre.pe.gov.br/gnreWS/services/GnreResultadoLote?wsdl'  # noqa
-ESOCIAL = 'https://webservices.consulta.esocial.gov.br/servicos/empregador/consultarloteeventos/WsConsultarLoteEventos.svc?singleWsdl'  # noqa
+ESOCIAL = 'https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?wsdl'  # noqa
 REINF = 'https://preprodefdreinf.receita.fazenda.gov.br/WsREINF/RecepcaoLoteReinf.svc'  # noqa
 GINFES = 'https://homologacao.ginfes.com.br/ServiceGinfesImpl?wsdl'
 CTE = 'https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteRecepcao.asmx?WSDL'  # noqa
@@ -44,56 +44,50 @@ class Tests(TestCase):
         self.transmissao = TransmissaoSOAP(certificado)
 
     def test_conexao_soap(self):
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(NFE).service, 'nfeStatusServicoNF')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(GNRE).service, 'consultar')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(ESOCIAL).service, 'ConsultarLoteEventos')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(CTE).service, 'cteRecepcaoLote')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(CAMPINAS).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(BELEM).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(SOROCABA).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(TERESINA).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(UBERLANDIA).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(SAOLUIS).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(UBERLANDIA).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(CAMPO_GRANDE).service, 'consultarNFSeRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(GINFES).service, 'RecepcionarLoteRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(CARIOCA).service, 'RecepcionarLoteRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(BH).service, 'RecepcionarLoteRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(SIMPLISSWEB).service,
-            'RecepcionarLoteRps')
-        )
-        self.assertTrue(hasattr(
-            self.transmissao.cliente(MARINGA).service, 'EnviarLoteRps')
-        )
-        # print(dir(self.transmissao.cliente(PETROPOLIS).service))
+        with self.transmissao.cliente(NFE) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'nfeStatusServicoNF'))
+
+        with self.transmissao.cliente(GNRE) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultar'))
+
+        with self.transmissao.cliente(ESOCIAL) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'EnviarLoteEventos'))
+
+        with self.transmissao.cliente(CTE) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'cteRecepcaoLote'))
+
+        with self.transmissao.cliente(CAMPINAS) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(BELEM) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(SOROCABA) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(TERESINA) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(UBERLANDIA) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(SAOLUIS) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(CAMPO_GRANDE) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+
+        with self.transmissao.cliente(GINFES) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'RecepcionarLoteRps'))
+
+        with self.transmissao.cliente(CARIOCA) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'RecepcionarLoteRps'))
+
+        with self.transmissao.cliente(BH) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'RecepcionarLoteRps'))
+
+        with self.transmissao.cliente(SIMPLISSWEB) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'RecepcionarLoteRps'))
+
+        with self.transmissao.cliente(MARINGA) as cliente:
+            self.assertTrue(hasattr(cliente.service, 'EnviarLoteRps'))
