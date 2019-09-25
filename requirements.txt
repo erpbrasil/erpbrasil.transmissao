@@ -1,0 +1,2 @@
+erpbrasil.assinatura==0.2.0
+zeep
