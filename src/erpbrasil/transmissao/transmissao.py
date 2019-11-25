@@ -78,9 +78,11 @@ class TransmissaoSOAP(Transmissao):
             self._cliente = False
 
     def interpretar_mensagem(self, mensagem):
-        return etree.fromstring(mensagem, parser=etree.XMLParser(
-            remove_blank_text=True
-        ))
+        if type(mensagem) == str:
+            return etree.fromstring(mensagem, parser=etree.XMLParser(
+                remove_blank_text=True
+            ))
+        return mensagem
 
     def set_header(self, elemento, **kwargs):
         header_element = self._cliente.get_element(elemento)
