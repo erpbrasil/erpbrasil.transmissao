@@ -79,11 +79,25 @@ class TransmissaoSOAP(Transmissao):
             yield self._cliente
             self._cliente = False
 
-    def interpretar_mensagem(self, mensagem):
+            print(history.last_sent)
+            print(history.last_received)
+
+    def interpretar_mensagem(self, mensagem, **kwargs):
+        # TODO: Finalizar refatoração
         if type(mensagem) == str:
             return etree.fromstring(mensagem, parser=etree.XMLParser(
                 remove_blank_text=True
             ))
+        # TODO: remover return dict, pois quebra os demais fluxos
+        # return mensagem
+        # TODO: Verificar a estrutura do XML passado para identificar o tipo
+        #  de documento e, assim, qual a key usada no dict
+
+        if 'distDFeInt' in mensagem.tag:
+            return dict(nfeDadosMsg=mensagem)
+
+        if 'TEnvEvento' in mensagem.tag:
+            return dict(nfeCabecMsg=mensagem)
         return mensagem
 
     def set_header(self, elemento, **kwargs):
@@ -92,9 +106,27 @@ class TransmissaoSOAP(Transmissao):
         self._cliente.set_default_soapheaders([header])
 
     def enviar(self, operacao, mensagem):
+        # TODO: Finalizar refatoração
+        header_str = \
+            '<nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/">' \
+            '<cUF>{}</cUF><versaoDados>{}</versaoDados></nfeCabecMsg>'.format(
+                'MG', mensagem.get('versao'))
+        _soapheaders = [etree.fromstring(header_str)]
+        mensagem_dict = self.interpretar_mensagem(mensagem)
         with self._cliente.settings(raw_response=self.raw_response):
+            if 'distDFeInt' in mensagem.tag:
+                return self._cliente.service[operacao](
+                    **mensagem_dict
+                )
+            if 'TEnvEvento' in mensagem.tag:
+                mensagem_dict['_soapheaders'] = _soapheaders
+                return self._cliente.service[operacao](
+                    # **mensagem_dict,
+                    mensagem, _soapheaders=_soapheaders
+
+                )
             return self._cliente.service[operacao](
-                self.interpretar_mensagem(mensagem)
+                mensagem_dict
             )
 
 
