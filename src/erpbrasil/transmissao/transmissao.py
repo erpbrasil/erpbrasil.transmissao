@@ -15,6 +15,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from zeep import Client
 from zeep.cache import SqliteCache
 from zeep.transports import Transport
+from zeep.plugins import HistoryPlugin
 
 ABC = abc.ABCMeta('ABC', (object,), {})
 
@@ -70,9 +71,10 @@ class TransmissaoSOAP(Transmissao):
             session.cert = (key, cert)
             session.verify = verify
             transport = Transport(session=session, cache=self._cache)
+            history = HistoryPlugin()
             self._cliente = Client(
                 url, transport=transport, service_name=service_name,
-                port_name=port_name
+                port_name=port_name, plugins=[history]
             )
             yield self._cliente
             self._cliente = False
