@@ -93,11 +93,29 @@ class TransmissaoSOAP(Transmissao):
         # TODO: Verificar a estrutura do XML passado para identificar o tipo
         #  de documento e, assim, qual a key usada no dict
 
+        _soapheaders = []
+        xmlns = ''
+        uf = 'MG'
+        operacao = kwargs.get('operacao', '')
         if 'distDFeInt' in mensagem.tag:
-            return dict(nfeDadosMsg=mensagem)
+            xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/'
+            mensagem = dict(nfeDadosMsg=mensagem)
+        elif 'TEnvEvento'in mensagem.tag:
+            xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4'
+            mensagem = dict(nfeCabecMsg=mensagem)
+        elif operacao == 'nfeRecepcaoEvento' and 'consStatServ' in mensagem.tag:
+            xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/RecepcaoEvento'
+            mensagem = dict(mensagem=mensagem)
 
-        if 'TEnvEvento' in mensagem.tag:
-            return dict(nfeCabecMsg=mensagem)
+        if xmlns:
+            header_str = \
+                '<nfeCabecMsg xmlns="{}">' \
+                '<cUF>{}</cUF><versaoDados>{}</versaoDados></nfeCabecMsg>'.format(
+                    xmlns, uf, mensagem.get('versao', '1.00'))
+
+            _soapheaders.append(etree.fromstring(header_str))
+            mensagem['_soapheaders'] = _soapheaders
+
         return mensagem
 
     def set_header(self, elemento, **kwargs):
@@ -107,26 +125,23 @@ class TransmissaoSOAP(Transmissao):
 
     def enviar(self, operacao, mensagem):
         # TODO: Finalizar refatoração
-        header_str = \
-            '<nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/">' \
-            '<cUF>{}</cUF><versaoDados>{}</versaoDados></nfeCabecMsg>'.format(
-                'MG', mensagem.get('versao'))
-        _soapheaders = [etree.fromstring(header_str)]
-        mensagem_dict = self.interpretar_mensagem(mensagem)
-        with self._cliente.settings(raw_response=self.raw_response):
-            if 'distDFeInt' in mensagem.tag:
-                return self._cliente.service[operacao](
-                    **mensagem_dict
-                )
-            if 'TEnvEvento' in mensagem.tag:
-                mensagem_dict['_soapheaders'] = _soapheaders
-                return self._cliente.service[operacao](
-                    # **mensagem_dict,
-                    mensagem, _soapheaders=_soapheaders
 
+        message_serv = self.interpretar_mensagem(mensagem, operacao=operacao)
+        with self._cliente.settings(raw_response=self.raw_response):
+            if isinstance(message_serv, dict):
+                # TODO: Remover necessidade desse IF
+                if operacao == 'nfeRecepcaoEvento' and 'consStatServ' in mensagem.tag:
+                    return self._cliente.service[operacao](
+                        mensagem,
+                        _soapheaders=message_serv.get('_soapheaders')
+                    )
+
+                # TODO: Juntar dois retornos em um
+                return self._cliente.service[operacao](
+                    **message_serv
                 )
             return self._cliente.service[operacao](
-                mensagem_dict
+                message_serv
             )
 
 
