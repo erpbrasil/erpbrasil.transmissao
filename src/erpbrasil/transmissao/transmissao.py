@@ -88,33 +88,34 @@ class TransmissaoSOAP(Transmissao):
             return etree.fromstring(mensagem, parser=etree.XMLParser(
                 remove_blank_text=True
             ))
-        # TODO: remover return dict, pois quebra os demais fluxos
-        # return mensagem
-        # TODO: Verificar a estrutura do XML passado para identificar o tipo
-        #  de documento e, assim, qual a key usada no dict
 
-        _soapheaders = []
-        xmlns = ''
-        uf = 'MG'
         operacao = kwargs.get('operacao', '')
-        if 'distDFeInt' in mensagem.tag:
+        uf = kwargs.get('uf', '')
+
+        if operacao and uf:
+            _soapheaders = []
             xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/'
-            mensagem = dict(nfeDadosMsg=mensagem)
-        elif 'TEnvEvento'in mensagem.tag:
-            xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4'
-            mensagem = dict(nfeCabecMsg=mensagem)
-        elif operacao == 'nfeRecepcaoEvento' and 'consStatServ' in mensagem.tag:
-            xmlns = 'http://www.portalfiscal.inf.br/nfe/wsdl/RecepcaoEvento'
-            mensagem = dict(mensagem=mensagem)
 
-        if xmlns:
-            header_str = \
-                '<nfeCabecMsg xmlns="{}">' \
-                '<cUF>{}</cUF><versaoDados>{}</versaoDados></nfeCabecMsg>'.format(
-                    xmlns, uf, mensagem.get('versao', '1.00'))
+            if 'distDFeInt' in mensagem.tag:
+                mensagem = dict(nfeDadosMsg=mensagem)
+            elif 'TEnvEvento'in mensagem.tag:
+                xmlns += 'NFeRecepcaoEvento4'
+                mensagem = dict(nfeCabecMsg=mensagem)
+            elif operacao == 'nfeRecepcaoEvento' and \
+                'consStatServ' in mensagem.tag:
+                xmlns += 'RecepcaoEvento'
+                mensagem = dict(mensagem=mensagem)
 
-            _soapheaders.append(etree.fromstring(header_str))
-            mensagem['_soapheaders'] = _soapheaders
+            if isinstance(mensagem, dict):
+                header_str = \
+                    '<nfeCabecMsg xmlns="{}">' \
+                    '<cUF>{}</cUF>' \
+                    '<versaoDados>{}</versaoDados>' \
+                    '</nfeCabecMsg>'.format(
+                        xmlns, uf, mensagem.get('versao', '1.00'))
+
+                _soapheaders.append(etree.fromstring(header_str))
+                mensagem['_soapheaders'] = _soapheaders
 
         return mensagem
 
@@ -123,25 +124,25 @@ class TransmissaoSOAP(Transmissao):
         header = header_element(**kwargs)
         self._cliente.set_default_soapheaders([header])
 
-    def enviar(self, operacao, mensagem):
-        # TODO: Finalizar refatoração
+    def enviar(self, operacao, mensagem, **kwargs):
 
-        message_serv = self.interpretar_mensagem(mensagem, operacao=operacao)
+        kwargs['operacao'] = operacao
+        mensagem = self.interpretar_mensagem(mensagem, **kwargs)
         with self._cliente.settings(raw_response=self.raw_response):
-            if isinstance(message_serv, dict):
+            if isinstance(mensagem, dict):
                 # TODO: Remover necessidade desse IF
                 if operacao == 'nfeRecepcaoEvento' and 'consStatServ' in mensagem.tag:
                     return self._cliente.service[operacao](
                         mensagem,
-                        _soapheaders=message_serv.get('_soapheaders')
+                        _soapheaders=mensagem.get('_soapheaders')
                     )
 
                 # TODO: Juntar dois retornos em um
                 return self._cliente.service[operacao](
-                    **message_serv
+                    **mensagem
                 )
             return self._cliente.service[operacao](
-                message_serv
+                mensagem
             )
 
 
