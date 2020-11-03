@@ -10,19 +10,6 @@ environment:
       PYTHON_ARCH: '32'
     - TOXENV: py27,codecov
 
-      TOXPYTHON: C:\Python27\python.exe
-      PYTHON_HOME: C:\Python27
-      PYTHON_VERSION: '2.7'
-      PYTHON_ARCH: '32'
-    - TOXENV: py27,codecov
-
-      TOXPYTHON: C:\Python27-x64\python.exe
-      PYTHON_HOME: C:\Python27-x64
-      PYTHON_VERSION: '2.7'
-      PYTHON_ARCH: '64'
-      WINDOWS_SDK_VERSION: v7.0
-    - TOXENV: py34,codecov
-
       TOXPYTHON: C:\Python34\python.exe
       PYTHON_HOME: C:\Python34
       PYTHON_VERSION: '3.4'
