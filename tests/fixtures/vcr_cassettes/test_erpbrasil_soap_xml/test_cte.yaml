@@ -1,0 +1,135 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteStatusServico.asmx?WSDL
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:s=\"\
+        http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"\
+        \ xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"\
+        \ xmlns:tns=\"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico\" xmlns:soap=\"\
+        http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"\
+        \ xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"\
+        http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        >\r\n  <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        >Servi\xE7o destinado \xE0 consulta do status do servi\xE7o prestado pelo\
+        \ Portal da Secretaria de Fazenda Estadual.</wsdl:documentation>\r\n  <wsdl:types>\r\
+        \n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico\"\
+        >\r\n      <s:element name=\"cteDadosMsg\">\r\n        <s:complexType mixed=\"\
+        true\">\r\n          <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\
+        \n        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        cteStatusServicoCTResult\">\r\n        <s:complexType mixed=\"true\">\r\n\
+        \          <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\
+        \n        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        cteCabecMsg\" type=\"tns:cteCabecMsg\" />\r\n      <s:complexType name=\"\
+        cteCabecMsg\">\r\n        <s:sequence>\r\n          <s:element minOccurs=\"\
+        0\" maxOccurs=\"1\" name=\"cUF\" type=\"s:string\" />\r\n          <s:element\
+        \ minOccurs=\"0\" maxOccurs=\"1\" name=\"versaoDados\" type=\"s:string\" />\r\
+        \n        </s:sequence>\r\n        <s:anyAttribute />\r\n      </s:complexType>\r\
+        \n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"cteStatusServicoCTSoap12In\"\
+        >\r\n    <wsdl:part name=\"cteDadosMsg\" element=\"tns:cteDadosMsg\" />\r\n\
+        \  </wsdl:message>\r\n  <wsdl:message name=\"cteStatusServicoCTSoap12Out\"\
+        >\r\n    <wsdl:part name=\"cteStatusServicoCTResult\" element=\"tns:cteStatusServicoCTResult\"\
+        \ />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"cteStatusServicoCTcteCabecMsg\"\
+        >\r\n    <wsdl:part name=\"cteCabecMsg\" element=\"tns:cteCabecMsg\" />\r\n\
+        \  </wsdl:message>\r\n  <wsdl:portType name=\"CteStatusServicoSoap12\">\r\n\
+        \    <wsdl:operation name=\"cteStatusServicoCT\">\r\n      <wsdl:documentation\
+        \ xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Consulta Status do Servi\xE7\
+        o</wsdl:documentation>\r\n      <wsdl:input message=\"tns:cteStatusServicoCTSoap12In\"\
+        \ />\r\n      <wsdl:output message=\"tns:cteStatusServicoCTSoap12Out\" />\r\
+        \n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"CteStatusServicoSoap12\"\
+        \ type=\"tns:CteStatusServicoSoap12\">\r\n    <soap12:binding transport=\"\
+        http://schemas.xmlsoap.org/soap/http\" />\r\n    <wsdl:operation name=\"cteStatusServicoCT\"\
+        >\r\n      <soap12:operation soapAction=\"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico/cteStatusServicoCT\"\
+        \ style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"\
+        literal\" />\r\n        <soap12:header message=\"tns:cteStatusServicoCTcteCabecMsg\"\
+        \ part=\"cteCabecMsg\" use=\"literal\" />\r\n      </wsdl:input>\r\n     \
+        \ <wsdl:output>\r\n        <soap12:body use=\"literal\" />\r\n        <soap12:header\
+        \ message=\"tns:cteStatusServicoCTcteCabecMsg\" part=\"cteCabecMsg\" use=\"\
+        literal\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\
+        \n  <wsdl:service name=\"CteStatusServico\">\r\n    <wsdl:documentation xmlns:wsdl=\"\
+        http://schemas.xmlsoap.org/wsdl/\">Servi\xE7o destinado \xE0 consulta do status\
+        \ do servi\xE7o prestado pelo Portal da Secretaria de Fazenda Estadual.</wsdl:documentation>\r\
+        \n    <wsdl:port name=\"CteStatusServicoSoap12\" binding=\"tns:CteStatusServicoSoap12\"\
+        >\r\n      <soap12:address location=\"https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteStatusServico.asmx\"\
+        \ />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3831'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:24 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version=''1.0'' encoding=''utf-8''?>
+
+      <soap-env:Envelope xmlns:soap-env="http://www.w3.org/2003/05/soap-envelope"><soap-env:Header><ns0:cteCabecMsg
+      xmlns:ns0="http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico"><ns0:cUF>35</ns0:cUF><ns0:versaoDados>3.00</ns0:versaoDados></ns0:cteCabecMsg></soap-env:Header><soap-env:Body><ns0:cteDadosMsg
+      xmlns:ns0="http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico"><consStatServCte
+      xmlns="http://www.portalfiscal.inf.br/cte" versao="3.00"><tpAmb>2</tpAmb><xServ>STATUS</xServ></consStatServCte></ns0:cteDadosMsg></soap-env:Body></soap-env:Envelope>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '598'
+      Content-Type:
+      - application/soap+xml; charset=utf-8; action="http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico/cteStatusServicoCT"
+      SOAPAction:
+      - '"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico/cteStatusServicoCT"'
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: POST
+    uri: https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteStatusServico.asmx
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"\
+        http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+        \ xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Header><cteCabecMsg\
+        \ xmlns=\"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico\"><cUF>35</cUF><versaoDados>3.00</versaoDados></cteCabecMsg></soap:Header><soap:Body><cteStatusServicoCTResult\
+        \ xmlns=\"http://www.portalfiscal.inf.br/cte/wsdl/CteStatusServico\"><retConsStatServCte\
+        \ versao=\"3.00\" xmlns=\"http://www.portalfiscal.inf.br/cte\"><tpAmb>2</tpAmb><verAplic>SP-CTe-2020-09-29-2</verAplic><cStat>107</cStat><xMotivo>Servi\xE7\
+        o em Opera\xE7\xE3o</xMotivo><cUF>35</cUF><dhRecbto>2020-11-06T10:10:23-03:00</dhRecbto><tMed>1</tMed></retConsStatServCte></cteStatusServicoCTResult></soap:Body></soap:Envelope>"
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '811'
+      Content-Type:
+      - application/soap+xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:25 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

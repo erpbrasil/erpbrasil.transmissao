@@ -3,6 +3,7 @@
 import os
 from unittest import TestCase
 
+import vcr
 from erpbrasil.assinatura.certificado import Certificado
 
 from erpbrasil.transmissao import TransmissaoSOAP
@@ -27,6 +28,11 @@ PETROPOLIS = 'https://petropolis.sigiss.com.br/petropolis/ws/sigiss_ws.php?wsdl'
 BH = 'https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl'
 MARINGA = 'https://isseteste.maringa.pr.gov.br/ws/?wsdl'
 
+vcr_cassettes_path = os.environ.get(
+    'vcr_cassettes_path',
+    'fixtures/vcr_cassettes'
+)
+
 
 class Tests(TestCase):
     """ Rodar este teste muitas vezes pode bloquear o seu IP"""
@@ -44,6 +50,9 @@ class Tests(TestCase):
 
         self.transmissao = TransmissaoSOAP(certificado)
 
+    @vcr.use_cassette(
+        vcr_cassettes_path +
+        '/test_erpbrasil_https_certificado/test_conexao_soap.yaml')
     def test_conexao_soap(self):
         with self.transmissao.cliente(NFE) as cliente:
             self.assertTrue(hasattr(cliente.service, 'nfeStatusServicoNF'))
@@ -60,8 +69,8 @@ class Tests(TestCase):
         with self.transmissao.cliente(CAMPINAS) as cliente:
             self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
 
-        with self.transmissao.cliente(BELEM) as cliente:
-            self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
+        # with self.transmissao.cliente(BELEM) as cliente:
+        #     self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))
 
         with self.transmissao.cliente(SOROCABA) as cliente:
             self.assertTrue(hasattr(cliente.service, 'consultarNFSeRps'))

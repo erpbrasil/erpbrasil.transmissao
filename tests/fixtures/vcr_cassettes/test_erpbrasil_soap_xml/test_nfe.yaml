@@ -1,0 +1,116 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://hom.sefazvirtual.fazenda.gov.br/NFeStatusServico4/NFeStatusServico4.asmx?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcpl
+        VmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8W
+        ZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3fPvjo9zj6jZPHV82sfDTLz4tl0VLTJqX3ls2j5rOP
+        5m27enT37tXV1fjq3riqL+7u7ezs3v29v3j+ejrPF9lHpmmVrXb3bPuGv2zG9CW+4RfRyV38tbt3
+        17yG5je/hO/tK4tikd/8ClrZV9plOJJVVbdZeV4006wcF8vz8aS+uzzP5c0Xz/LXbdaum9d5fVlM
+        q30DBR1YMIMd4y/X8cK+sCimddVU5+14Wi2kKePY5u/aL7J2Oqc5se8BCE2UfTnWG365S414NunN
+        Nqsv8vZFtsibVTZ1JPr6A8a3FkwMBTS4+xExUJoKC7XXq7zhv+kTGga/k+ZlvsiX7bOqXjzNz7N1
+        2X720S9aZ2VxXuSzbxRx7Zo7117TJQH+7CN66Wk2q5ovmgvXitvRdKzK/N0bQj1dFO/y2WcftfU6
+        91txuyb/RWsidx58zt9ky+v0bvDx47vR9vjY685+g88VXfeZ/ciN4FXeEPH+PzIEfCIMwB885jnz
+        OEQ4hia9yS5yN8ZgRl88e028drY0I5F3VlntEcVOq+EzGjwxb/CNDE1R0C7lI/8TBzOCxJfrdhMW
+        nTdkpvooyee3wQmcDwprFz1eB04hQtUqrzOob32FugteefHMtDdvzKrpGujJWyTZhCS+sCIo8xcV
+        egb6j/6VVTrLm7ZYEqnTf/QvSqdkPGiAWUp/NgR33fBvpu2qpsZousrLLH1NyuAH6U8WdUvKAO2O
+        F5OC0MnTF9mUMMpKpU6AZ2cMxXK1blOln6VzZ+AgFnGR0hyPvFyt21u+jem3rytaluD8sX5o5k0+
+        448mxRI6WqclPpMpBEMQiDdgeAQR82AhtnW2bNDjxhnDL2xDvREwYnYAilp/6KZbegNQvDfw5/EU
+        v9q+319h46vgE+qR+Oa6JGTMpDukCQmAkSm3n9GnwOXRpJpdp+uG3iyLlrAsgxcZgc6bAk14wH5I
+        H98aXPCq+cxQiD/WD3W+5CP/EyV8jzCY8t299+OK3T0L9YfNF9S1ewcf/L+JMwi520xm+K7ACyYY
+        z/sADF42nxkq8cf6oc6afMSfsMKcDup+Q31pDMIOtWQmSbWDWzASwcQIH2WzGanqJi2rKaMrM9nQ
+        VM6rxbiB4r4UvT2mX/PlLBtfVJeY0h74/ifjrFm8cwRTKmAY5hP7waZxQT5uHhm1UqgEF2Oj2fu5
+        HJ3+rTNMH+kHXvR19P8AgmFEbbgNAAA=
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1049'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:25 GMT
+      Server:
+      - Microsoft-IIS/8.5
+      Vary:
+      - Accept-Encoding
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version=''1.0'' encoding=''utf-8''?>
+
+      <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Body><ns0:nfeDadosMsg
+      xmlns:ns0="http://www.portalfiscal.inf.br/nfe/wsdl/NFeStatusServico4"><consStatServ
+      xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00"><tpAmb>2</tpAmb><cUF>35</cUF><xServ>STATUS</xServ></consStatServ></ns0:nfeDadosMsg></soap-env:Body></soap-env:Envelope>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '409'
+      Content-Type:
+      - text/xml; charset=utf-8
+      SOAPAction:
+      - '"http://www.portalfiscal.inf.br/nfe/wsdl/NFeStatusServico4/nfeStatusServicoNF"'
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: POST
+    uri: https://hom.sefazvirtual.fazenda.gov.br/NFeStatusServico4/NFeStatusServico4.asmx
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcpl
+        VmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8W
+        ZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3fPvjo9zh63FTZ6tHp8jIvq1We0ivL5hE+++yjeduu
+        Ht2920zn+SJrxvQVPh9X9cVd/HI315fufqSvvWsK+9bV1dX46h433tvZ2b37e3/x/DUD2i6WTZst
+        p7l7a3bzWx8pok+q2fXR4+V5/ipv1mX7RXMhUAIIq6pus/K8aKZZOS6W5+NJfZdeuXvVzMq7L57l
+        r9usXTev8/qymFb7BLrO25Nq2eBzfMpEy6rPPtof7xDRbt0BQWpXx4vJ0d7ju/LLY4J0vCqL6dHr
+        nzx+8fvfG98b7zy+az98PEWXR7s7Dx7flV8fv/uiaovL6gh4EHZpvki/XOV1Ns2qx3fNl4+nXz07
+        unefXqKfj2fzV/l00lZHezt7O9u7u9s7n77Z3XlE/9u7v71z79EOdWnbPG6/yGdHu4Qgfj6+2xk6
+        fUIDscSlPz2yy++GV47+HziT1mlhAgAA
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '480'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:25 GMT
+      Server:
+      - Microsoft-IIS/8.5
+      Vary:
+      - Accept-Encoding
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

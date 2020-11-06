@@ -1,0 +1,129 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://mdfe-homologacao.svrs.rs.gov.br/ws/MDFeStatusServico/MDFeStatusServico.asmx?WSDL
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:s=\"\
+        http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"\
+        \ xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"\
+        \ xmlns:tns=\"http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico\"\
+        \ xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"\
+        \ xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"\
+        http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico\" xmlns:wsdl=\"\
+        http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema elementFormDefault=\"\
+        qualified\" targetNamespace=\"http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico\"\
+        >\r\n      <s:element name=\"mdfeDadosMsg\">\r\n        <s:complexType mixed=\"\
+        true\">\r\n          <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\
+        \n        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        mdfeStatusServicoMDFResult\">\r\n        <s:complexType mixed=\"true\">\r\n\
+        \          <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\
+        \n        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        mdfeCabecMsg\" type=\"tns:mdfeCabecMsg\" />\r\n      <s:complexType name=\"\
+        mdfeCabecMsg\">\r\n        <s:sequence>\r\n          <s:element minOccurs=\"\
+        0\" maxOccurs=\"1\" name=\"cUF\" type=\"s:string\" />\r\n          <s:element\
+        \ minOccurs=\"0\" maxOccurs=\"1\" name=\"versaoDados\" type=\"s:string\" />\r\
+        \n        </s:sequence>\r\n        <s:anyAttribute />\r\n      </s:complexType>\r\
+        \n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"mdfeStatusServicoMDFSoap12In\"\
+        >\r\n    <wsdl:part name=\"mdfeDadosMsg\" element=\"tns:mdfeDadosMsg\" />\r\
+        \n  </wsdl:message>\r\n  <wsdl:message name=\"mdfeStatusServicoMDFSoap12Out\"\
+        >\r\n    <wsdl:part name=\"mdfeStatusServicoMDFResult\" element=\"tns:mdfeStatusServicoMDFResult\"\
+        \ />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"mdfeStatusServicoMDFmdfeCabecMsg\"\
+        >\r\n    <wsdl:part name=\"mdfeCabecMsg\" element=\"tns:mdfeCabecMsg\" />\r\
+        \n  </wsdl:message>\r\n  <wsdl:portType name=\"MDFeStatusServicoSoap12\">\r\
+        \n    <wsdl:operation name=\"mdfeStatusServicoMDF\">\r\n      <wsdl:input\
+        \ message=\"tns:mdfeStatusServicoMDFSoap12In\" />\r\n      <wsdl:output message=\"\
+        tns:mdfeStatusServicoMDFSoap12Out\" />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\
+        \n  <wsdl:binding name=\"MDFeStatusServicoSoap12\" type=\"tns:MDFeStatusServicoSoap12\"\
+        >\r\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"\
+        \ />\r\n    <wsdl:operation name=\"mdfeStatusServicoMDF\">\r\n      <soap12:operation\
+        \ soapAction=\"http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico/mdfeStatusServicoMDF\"\
+        \ style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"\
+        literal\" />\r\n        <soap12:header message=\"tns:mdfeStatusServicoMDFmdfeCabecMsg\"\
+        \ part=\"mdfeCabecMsg\" use=\"literal\" />\r\n      </wsdl:input>\r\n    \
+        \  <wsdl:output>\r\n        <soap12:body use=\"literal\" />\r\n        <soap12:header\
+        \ message=\"tns:mdfeStatusServicoMDFmdfeCabecMsg\" part=\"mdfeCabecMsg\" use=\"\
+        literal\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\
+        \n  <wsdl:service name=\"MDFeStatusServico\">\r\n    <wsdl:port name=\"MDFeStatusServicoSoap12\"\
+        \ binding=\"tns:MDFeStatusServicoSoap12\">\r\n      <soap12:address location=\"\
+        https://mdfe-homologacao.svrs.rs.gov.br/ws/MDFeStatusServico/MDFeStatusServico.asmx\"\
+        \ />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3366'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:25 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version=''1.0'' encoding=''utf-8''?>
+
+      <soap-env:Envelope xmlns:soap-env="http://www.w3.org/2003/05/soap-envelope"><soap-env:Header><ns0:mdfeCabecMsg
+      xmlns:ns0="http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico"><ns0:cUF>35</ns0:cUF><ns0:versaoDados>3.00</ns0:versaoDados></ns0:mdfeCabecMsg></soap-env:Header><soap-env:Body><ns0:mdfeDadosMsg
+      xmlns:ns0="http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico"><consStatServMDFe
+      xmlns="http://www.portalfiscal.inf.br/mdfe" versao="3.00"><tpAmb>2</tpAmb><xServ>STATUS</xServ></consStatServMDFe></ns0:mdfeDadosMsg></soap-env:Body></soap-env:Envelope>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '609'
+      Content-Type:
+      - application/soap+xml; charset=utf-8; action="http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico/mdfeStatusServicoMDF"
+      SOAPAction:
+      - '"http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico/mdfeStatusServicoMDF"'
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: POST
+    uri: https://mdfe-homologacao.svrs.rs.gov.br/ws/MDFeStatusServico/MDFeStatusServico.asmx
+  response:
+    body:
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Header><mdfeCabecMsg
+        xmlns="http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico"><cUF>35</cUF><versaoDados>3.00</versaoDados></mdfeCabecMsg></soap:Header><soap:Body><mdfeStatusServicoMDFResult
+        xmlns="http://www.portalfiscal.inf.br/mdfe/wsdl/MDFeStatusServico"><retConsStatServMDFe
+        xmlns="http://www.portalfiscal.inf.br/mdfe" versao="3.00"><tpAmb>2</tpAmb><verAplic>RS20191021102650</verAplic><cStat>107</cStat><xMotivo>Servico
+        em Operacao</xMotivo><cUF>35</cUF><dhRecbto>2020-11-06T10:10:26-03:00</dhRecbto><tMed>2</tMed></retConsStatServMDFe></mdfeStatusServicoMDFResult></soap:Body></soap:Envelope>
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '818'
+      Content-Type:
+      - application/soap+xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:25 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

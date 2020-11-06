@@ -1,8 +1,17 @@
 # coding=utf-8
 
+import os
 import requests
+import vcr
+
+vcr_cassettes_path = os.environ.get(
+    'vcr_cassettes_path',
+    'fixtures/vcr_cassettes'
+)
 
 
+@vcr.use_cassette(
+    vcr_cassettes_path + '/test_http_itau/test_conexao_boleto_itau.yaml')
 def test_conexao_boleto_itau():
     # ENDPOINT Válido
     endpoint = 'https://oauth.itau.com.br/identity/connect/token'

@@ -1,0 +1,2266 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://www.testegnre.pe.gov.br/gnreWS/services/GnreResultadoLote?wsdl
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsdl:definitions targetNamespace=\"\
+        http://www.gnre.pe.gov.br/webservice/GnreResultadoLote\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\"\
+        \ xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"\
+        \ xmlns:tns=\"http://www.gnre.pe.gov.br/webservice/GnreResultadoLote\" xmlns:wsdl=\"\
+        http://schemas.xmlsoap.org/wsdl/\">\n\n\t <wsdl:types>\n\n\t\t  <s:schema\
+        \ elementFormDefault=\"qualified\" targetNamespace=\"http://www.gnre.pe.gov.br/webservice/GnreResultadoLote\"\
+        >\n\n\t\t\t   <s:element name=\"gnreDadosMsg\">\n\n\t\t\t\t    <s:complexType\
+        \ mixed=\"true\">\n\n\t\t\t\t\t     <s:sequence>\n\n\t\t\t\t\t\t      <s:any/>\n\
+        \n\t\t\t\t\t     </s:sequence>\n\n\t\t\t\t    </s:complexType>\n\n\t\t\t \
+        \  </s:element>\n\n\t\t\t   <s:element name=\"gnreRespostaMsg\">\n\n\t\t\t\
+        \t    <s:complexType mixed=\"true\">\n\n\t\t\t\t\t     <s:sequence>\n\n\t\t\
+        \t\t\t\t      <s:any/>\n\n\t\t\t\t\t     </s:sequence>\n\n\t\t\t\t    </s:complexType>\n\
+        \n\t\t\t   </s:element>\n\n\t\t\t   <s:element name=\"gnreCabecMsg\">\n\n\t\
+        \t\t\t    <s:complexType>\n\n\t\t\t\t\t     <s:sequence>\n\n\t\t\t\t\t\t \
+        \     <s:element maxOccurs=\"1\" minOccurs=\"0\" name=\"versaoDados\" type=\"\
+        s:string\"/>\n\n\t\t\t\t\t     </s:sequence>\n\n\t\t\t\t    </s:complexType>\n\
+        \n\t\t\t   </s:element>\n\n\t\t  </s:schema>\n\n\t </wsdl:types>\n\n\t <wsdl:message\
+        \ name=\"consultarSoapIn\">\n\n\t\t  <wsdl:part element=\"tns:gnreDadosMsg\"\
+        \ name=\"gnreDadosMsg\"/>\n\n\t </wsdl:message>\n\n\t <wsdl:message name=\"\
+        consultarSoapOut\">\n\n\t\t  <wsdl:part element=\"tns:gnreRespostaMsg\" name=\"\
+        gnreRespostaMsg\"/>\n\n\t </wsdl:message>\n\n\t <wsdl:message name=\"consultarSoapHeader\"\
+        >\n\n\t\t  <wsdl:part element=\"tns:gnreCabecMsg\" name=\"gnreCabecMsg\"/>\n\
+        \n\t </wsdl:message>\n\n\t <wsdl:portType name=\"GnreResultadoLoteSoap\">\n\
+        \n\t\t  <wsdl:operation name=\"consultar\">\n\n\t\t\t   <wsdl:input message=\"\
+        tns:consultarSoapIn\"/>\n\n\t\t\t   <wsdl:output message=\"tns:consultarSoapOut\"\
+        />\n\n\t\t  </wsdl:operation>\n\n\t </wsdl:portType>\n\n\t <wsdl:binding name=\"\
+        GnreResultadoLote\" type=\"tns:GnreResultadoLoteSoap\">\n\n\t\t  <soap12:binding\
+        \ transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n\n\t\t  <wsdl:operation\
+        \ name=\"consultar\">\n\n\t\t\t   <soap12:operation soapAction=\"http://www.gnre.pe.gov.br/webservice/GnreResultadoLote/consultar\"\
+        \ style=\"document\"/>\n\n\t\t\t   <wsdl:input>\n\n\t\t\t\t    <soap12:body\
+        \ use=\"literal\"/>\n\n\t\t\t\t    <soap12:header message=\"tns:consultarSoapHeader\"\
+        \ part=\"gnreCabecMsg\" use=\"literal\"/>\n\n\t\t\t   </wsdl:input>\n\n\t\t\
+        \t   <wsdl:output>\n\n\t\t\t\t    <soap12:body use=\"literal\"/>\n\n\t\t\t\
+        \   </wsdl:output>\n\n\t\t  </wsdl:operation>\n\n\t </wsdl:binding>\n\n\t\
+        \ <wsdl:service name=\"GnreResultadoLote\">\n\n\t\t  <wsdl:port binding=\"\
+        tns:GnreResultadoLote\" name=\"GnreResultadoLote\">\n\n\t\t\t   <soap12:address\
+        \ location=\"http://www.testegnre.pe.gov.br/gnreWS/services/GnreResultadoLote\"\
+        />\n\n\t\t  </wsdl:port>\n\n\t </wsdl:service>\n\n</wsdl:definitions>\n"
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Language:
+      - en-US
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:29 GMT
+      Keep-Alive:
+      - timeout=10, max=100
+      Transfer-Encoding:
+      - chunked
+      X-Powered-By:
+      - Servlet/3.0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?wsdl
+  response:
+    body:
+      string: <?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="ServicoEnviarLoteEventos"
+        targetNamespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+        xmlns:i0="http://www.esocial.gov.br/servicos/empregador/enviarloteeventos/v1_1_0"
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+        xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+        xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+        xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+        xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"><wsdl:import namespace="http://www.esocial.gov.br/servicos/empregador/enviarloteeventos/v1_1_0"
+        location="https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?wsdl=wsdl0"/><wsdl:types><xsd:schema
+        targetNamespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0/Imports"><xsd:import
+        schemaLocation="https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?xsd=xsd0"
+        namespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"/></xsd:schema></wsdl:types><wsdl:message
+        name="ServicoEnviarLoteEventos_EnviarLoteEventos_InputMessage"><wsdl:part
+        name="parameters" element="tns:EnviarLoteEventos"/></wsdl:message><wsdl:message
+        name="ServicoEnviarLoteEventos_EnviarLoteEventos_OutputMessage"><wsdl:part
+        name="parameters" element="tns:EnviarLoteEventosResponse"/></wsdl:message><wsdl:portType
+        name="ServicoEnviarLoteEventos"><wsdl:operation name="EnviarLoteEventos"><wsdl:input
+        wsaw:Action="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0/ServicoEnviarLoteEventos/EnviarLoteEventos"
+        message="tns:ServicoEnviarLoteEventos_EnviarLoteEventos_InputMessage"/><wsdl:output
+        wsaw:Action="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0/ServicoEnviarLoteEventos/EnviarLoteEventosResponse"
+        message="tns:ServicoEnviarLoteEventos_EnviarLoteEventos_OutputMessage"/></wsdl:operation></wsdl:portType><wsdl:service
+        name="ServicoEnviarLoteEventos"><wsdl:port name="WsEnviarLoteEventos" binding="i0:WsEnviarLoteEventos"><soap:address
+        location="https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc"/></wsdl:port></wsdl:service></wsdl:definitions>
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '2959'
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:30 GMT
+      Server:
+      - Microsoft-IIS/8.5
+      Set-Cookie:
+      - ASP.NET_SessionId=uo4v5iv0hlobzb01hxhvdidu; path=/; HttpOnly; SameSite=Lax
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ASP.NET_SessionId=uo4v5iv0hlobzb01hxhvdidu
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?wsdl=wsdl0
+  response:
+    body:
+      string: <?xml version="1.0" encoding="utf-8"?><wsdl:definitions targetNamespace="http://www.esocial.gov.br/servicos/empregador/enviarloteeventos/v1_1_0"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+        xmlns:i0="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+        xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+        xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+        xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://www.esocial.gov.br/servicos/empregador/enviarloteeventos/v1_1_0"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+        xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"><wsp:Policy wsu:Id="WsEnviarLoteEventos_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding
+        xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken
+        RequireClientCertificate="true"/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout></wsp:Policy></sp:TransportBinding></wsp:All></wsp:ExactlyOne></wsp:Policy><wsdl:import
+        namespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"
+        location="https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?wsdl"/><wsdl:types/><wsdl:binding
+        name="WsEnviarLoteEventos" type="i0:ServicoEnviarLoteEventos"><wsp:PolicyReference
+        URI="#WsEnviarLoteEventos_policy"/><soap:binding transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation
+        name="EnviarLoteEventos"><soap:operation soapAction="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0/ServicoEnviarLoteEventos/EnviarLoteEventos"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation></wsdl:binding></wsdl:definitions>
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '2423'
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:30 GMT
+      Server:
+      - Microsoft-IIS/8.5
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ASP.NET_SessionId=uo4v5iv0hlobzb01hxhvdidu
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc?xsd=xsd0
+  response:
+    body:
+      string: <?xml version="1.0" encoding="utf-8"?><xs:schema elementFormDefault="qualified"
+        targetNamespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/v1_1_0"><xs:element
+        name="EnviarLoteEventos"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="loteEventos"><xs:complexType><xs:sequence><xs:any/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element><xs:element
+        name="EnviarLoteEventosResponse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="EnviarLoteEventosResult"><xs:complexType><xs:sequence><xs:any/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element></xs:schema>
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '832'
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:30 GMT
+      Server:
+      - Microsoft-IIS/8.5
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteRecepcao.asmx?WSDL
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:s=\"\
+        http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"\
+        \ xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"\
+        \ xmlns:tns=\"http://www.portalfiscal.inf.br/cte/wsdl/CteRecepcao\" xmlns:soap=\"\
+        http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"\
+        \ xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"\
+        http://www.portalfiscal.inf.br/cte/wsdl/CteRecepcao\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        >\r\n  <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        >Servi\xE7o destinado \xE0 recep\xE7\xE3o de mensagens de lote de CT-e.</wsdl:documentation>\r\
+        \n  <wsdl:types>\r\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"\
+        http://www.portalfiscal.inf.br/cte/wsdl/CteRecepcao\">\r\n      <s:element\
+        \ name=\"cteDadosMsg\">\r\n        <s:complexType mixed=\"true\">\r\n    \
+        \      <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\n\
+        \        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        cteRecepcaoLoteResult\">\r\n        <s:complexType mixed=\"true\">\r\n   \
+        \       <s:sequence>\r\n            <s:any />\r\n          </s:sequence>\r\
+        \n        </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"\
+        cteCabecMsg\" type=\"tns:cteCabecMsg\" />\r\n      <s:complexType name=\"\
+        cteCabecMsg\">\r\n        <s:sequence>\r\n          <s:element minOccurs=\"\
+        0\" maxOccurs=\"1\" name=\"cUF\" type=\"s:string\" />\r\n          <s:element\
+        \ minOccurs=\"0\" maxOccurs=\"1\" name=\"versaoDados\" type=\"s:string\" />\r\
+        \n        </s:sequence>\r\n        <s:anyAttribute />\r\n      </s:complexType>\r\
+        \n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"cteRecepcaoLoteSoap12In\"\
+        >\r\n    <wsdl:part name=\"cteDadosMsg\" element=\"tns:cteDadosMsg\" />\r\n\
+        \  </wsdl:message>\r\n  <wsdl:message name=\"cteRecepcaoLoteSoap12Out\">\r\
+        \n    <wsdl:part name=\"cteRecepcaoLoteResult\" element=\"tns:cteRecepcaoLoteResult\"\
+        \ />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"cteRecepcaoLotecteCabecMsg\"\
+        >\r\n    <wsdl:part name=\"cteCabecMsg\" element=\"tns:cteCabecMsg\" />\r\n\
+        \  </wsdl:message>\r\n  <wsdl:portType name=\"CteRecepcaoSoap12\">\r\n   \
+        \ <wsdl:operation name=\"cteRecepcaoLote\">\r\n      <wsdl:documentation xmlns:wsdl=\"\
+        http://schemas.xmlsoap.org/wsdl/\">Transmiss\xE3o de Lote de CT-e</wsdl:documentation>\r\
+        \n      <wsdl:input message=\"tns:cteRecepcaoLoteSoap12In\" />\r\n      <wsdl:output\
+        \ message=\"tns:cteRecepcaoLoteSoap12Out\" />\r\n    </wsdl:operation>\r\n\
+        \  </wsdl:portType>\r\n  <wsdl:binding name=\"CteRecepcaoSoap12\" type=\"\
+        tns:CteRecepcaoSoap12\">\r\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"\
+        \ />\r\n    <wsdl:operation name=\"cteRecepcaoLote\">\r\n      <soap12:operation\
+        \ soapAction=\"http://www.portalfiscal.inf.br/cte/wsdl/CteRecepcao/cteRecepcaoLote\"\
+        \ style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"\
+        literal\" />\r\n        <soap12:header message=\"tns:cteRecepcaoLotecteCabecMsg\"\
+        \ part=\"cteCabecMsg\" use=\"literal\" />\r\n      </wsdl:input>\r\n     \
+        \ <wsdl:output>\r\n        <soap12:body use=\"literal\" />\r\n        <soap12:header\
+        \ message=\"tns:cteRecepcaoLotecteCabecMsg\" part=\"cteCabecMsg\" use=\"literal\"\
+        \ />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\
+        \n  <wsdl:service name=\"CteRecepcao\">\r\n    <wsdl:documentation xmlns:wsdl=\"\
+        http://schemas.xmlsoap.org/wsdl/\">Servi\xE7o destinado \xE0 recep\xE7\xE3\
+        o de mensagens de lote de CT-e.</wsdl:documentation>\r\n    <wsdl:port name=\"\
+        CteRecepcaoSoap12\" binding=\"tns:CteRecepcaoSoap12\">\r\n      <soap12:address\
+        \ location=\"https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/CteRecepcao.asmx\"\
+        \ />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3646'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:29 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-AspNet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://issdigital.campinas.sp.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+RaXU/bMBR976/w8rRJa1JaoU0VBYGAJ8YkwgSvbuIWT4md2W5L//3sfJGkTZO0
+        DpT2jca+vtfHxzf33HB28ep7YI4Yx5SMjBOzZwBEHOpiMh0Zfx5vuz+Ni/PO2YK73tBFE0ywkDM5
+        EJBNkbiHPuIBdNDIeBEiGFoW5tzFUyygZzrQDzCB3OSBOaVzc8ysJ35/i/rWHRXoIeDm3wU3gAyA
+        8CGUq7wgTmGQLiUHzOixSdlU/eyq8cQC+4G3s1tMxGTnRVRUErR0HS5D9qWtHFVDYfTqDytB1kos
+        FawbzdSE3OwcQqUWobfE7JW7qcVisTAXg3Biv9c7sZ5/3dnhIoY85C/d7pN9fQcchqBALhgvwWWI
+        P7h8xTxhyRCcmIPO1Qx7AlACfjsC9E6/A7ncKfjaOx32B8PBD3Bz/fit2z3vdAAAEXskUzicIkAk
+        Z0YGInMM2YNkj2QTMqKJ6dwAMlGYKGaMGEAsA/lM7mjIBZNIZgyt1DL2amXdlkciEBfopm44udnv
+        E9O/mfy1ISQfEWXqP/teK8E4kDjIq4XO29TWoHFkCDNPpp/wItYIKT//veL68ENLwrm/tVW+aoJU
+        atI+WKmr/cGLCrgH4aQX6aMjifKvjYnDKKH7Es/Hx5ESxlahEAdDr+E1Kxi2dtmKJ1jzlftm0H4a
+        KECxN2cbJYMGmTOcrxGvgDLxKBeKHcXFZzEUGiAGVV2+EVcDSI9yXCD2m7mI5XFMl0xXxSSYCRAH
+        NTJUvT3cfGLNjjXZduhn1T2difr+4yNqeDeTCCJXxfNJUa1AO39ddKC8PufWS8jboFqSIWrmDz0o
+        ZkpeHRCuqaBr1NbbgLdOP9SRFjrJp490a8mmkWTrydUWOrmiXGv+y1b5tRTATtkup3XqCSHNAKo3
+        m1YAs3V2rRp8JwBzL/J6b3lNAMaFvBbsCqKgSitshVhR7Fc2AXQTLVKEermWV5l1RehujCvo7tq6
+        vBGeSSkZl4nZ0nGMieo15itHm8LgKhpIKtQw7PWFpWojputwsfTkdBY40pJBwpXT6p6nGjes7QrW
+        FczDgN6M1c9LR4St64yPAimaFaXF3VN3mXbE7QiCBm1estIgDxh1EDcXnExQ33T5hCBhOtQ3xzJH
+        zHj4SpTmyC1sqA4VG1a/bW+1eT+9cv9aK3Wd9Kqqyj8/rSplwNHRKStZdHJpo0L5/ETarIqOjkVI
+        P4HKVNvn506pXDw62uSlbSuV0nod+/lJVKWcj5dLocpvhUvrJf0BcamkiXB8XEoaHlppVNriOAAG
+        lXdWjo88xS5QO7morN9zAGSqbi8dKqnip3G7KtsJ44jNsVP4hmpHD1e+6lImQLxGvjeWa52VfI7N
+        IQtdlyHOgUcdGDF0W4Ss4tZVlLldx1uUz+IHmf/VPO/8BwAA//8DABqDeIrmKQAA
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:30 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://issdigital.sorocaba.sp.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>302 Found</title>
+
+        </head><body>
+
+        <h1>Found</h1>
+
+        <p>The document has moved <a href="https://issdigital.sorocaba.sp.gov.br/WsNFe2/LoteRps.jws?wsdl">here</a>.</p>
+
+        </body></html>
+
+        '
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '245'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Date:
+      - Fri, 06 Nov 2020 13:10:29 GMT
+      Keep-Alive:
+      - timeout=15, max=300
+      Location:
+      - https://issdigital.sorocaba.sp.gov.br/WsNFe2/LoteRps.jws?wsdl
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+    status:
+      code: 302
+      message: Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://issdigital.sorocaba.sp.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsdl:definitions targetNamespace=\"\
+        https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" xmlns:apachesoap=\"\
+        http://xml.apache.org/xml-soap\" xmlns:impl=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\"\
+        \ xmlns:intf=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" xmlns:soapenc=\"\
+        http://schemas.xmlsoap.org/soap/encoding/\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        \ xmlns:wsdlsoap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\
+        >\n<!--WSDL created by Apache Axis version: 1.3\nBuilt on Oct 05, 2005 (05:23:37\
+        \ EDT)-->\n\n   <wsdl:message name=\"consultarAliquotaSimplesNacionalResponse\"\
+        >\n\n      <wsdl:part name=\"consultarAliquotaSimplesNacionalReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"cancelarResponse\">\n\n      <wsdl:part name=\"cancelarReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaTomadaRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"testeEnviarResponse\">\n\n      <wsdl:part name=\"testeEnviarReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"testeEnviarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarResponse\">\n\n      <wsdl:part name=\"enviarReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarAliquotaSimplesNacionalRequest\">\n\n      <wsdl:part name=\"\
+        cpfResponsavel\" type=\"xsd:string\">\n\n      </wsdl:part>\n\n      <wsdl:part\
+        \ name=\"ultimaAtualizacao\" type=\"xsd:string\">\n\n      </wsdl:part>\n\n\
+        \      <wsdl:part name=\"codCid\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarSequencialRpsResponse\"\
+        >\n\n      <wsdl:part name=\"consultarSequencialRpsReturn\" type=\"xsd:string\"\
+        >\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"\
+        enviarSincronoResponse\">\n\n      <wsdl:part name=\"enviarSincronoReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaResponse\">\n\n      <wsdl:part name=\"consultarNotaReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarSequencialRpsRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaTomadaResponse\">\n\n      <wsdl:part name=\"consultarNotaTomadaReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarSincronoRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNFSeRpsResponse\">\n\n      <wsdl:part name=\"consultarNFSeRpsReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNFSeRpsRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"cancelarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarLoteResponse\">\n\n      <wsdl:part name=\"consultarLoteReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarLoteRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:portType\
+        \ name=\"LoteRps\">\n\n      <wsdl:operation name=\"consultarSequencialRps\"\
+        \ parameterOrder=\"mensagemXml\">\n\n         <wsdl:input message=\"impl:consultarSequencialRpsRequest\"\
+        \ name=\"consultarSequencialRpsRequest\">\n\n       </wsdl:input>\n\n    \
+        \     <wsdl:output message=\"impl:consultarSequencialRpsResponse\" name=\"\
+        consultarSequencialRpsResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviarSincrono\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:enviarSincronoRequest\" name=\"enviarSincronoRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarSincronoResponse\"\
+        \ name=\"enviarSincronoResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviar\" parameterOrder=\"mensagemXml\">\n\n\
+        \         <wsdl:input message=\"impl:enviarRequest\" name=\"enviarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarResponse\"\
+        \ name=\"enviarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"testeEnviar\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:testeEnviarRequest\" name=\"testeEnviarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:testeEnviarResponse\"\
+        \ name=\"testeEnviarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarLote\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarLoteRequest\" name=\"consultarLoteRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarLoteResponse\"\
+        \ name=\"consultarLoteResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarAliquotaSimplesNacional\" parameterOrder=\"\
+        cpfResponsavel ultimaAtualizacao codCid\">\n\n         <wsdl:input message=\"\
+        impl:consultarAliquotaSimplesNacionalRequest\" name=\"consultarAliquotaSimplesNacionalRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarAliquotaSimplesNacionalResponse\"\
+        \ name=\"consultarAliquotaSimplesNacionalResponse\">\n\n       </wsdl:output>\n\
+        \n      </wsdl:operation>\n\n      <wsdl:operation name=\"consultarNotaTomada\"\
+        \ parameterOrder=\"mensagemXml\">\n\n         <wsdl:input message=\"impl:consultarNotaTomadaRequest\"\
+        \ name=\"consultarNotaTomadaRequest\">\n\n       </wsdl:input>\n\n       \
+        \  <wsdl:output message=\"impl:consultarNotaTomadaResponse\" name=\"consultarNotaTomadaResponse\"\
+        >\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNota\" parameterOrder=\"mensagemXml\">\n\n         <wsdl:input\
+        \ message=\"impl:consultarNotaRequest\" name=\"consultarNotaRequest\">\n\n\
+        \       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarNotaResponse\"\
+        \ name=\"consultarNotaResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"cancelar\" parameterOrder=\"mensagemXml\">\n\
+        \n         <wsdl:input message=\"impl:cancelarRequest\" name=\"cancelarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:cancelarResponse\"\
+        \ name=\"cancelarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarNFSeRps\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarNFSeRpsRequest\" name=\"\
+        consultarNFSeRpsRequest\">\n\n       </wsdl:input>\n\n         <wsdl:output\
+        \ message=\"impl:consultarNFSeRpsResponse\" name=\"consultarNFSeRpsResponse\"\
+        >\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:portType>\n\
+        \n   <wsdl:binding name=\"LoteRpsSoapBinding\" type=\"impl:LoteRps\">\n\n\
+        \      <wsdlsoap:binding style=\"rpc\" transport=\"http://schemas.xmlsoap.org/soap/http\"\
+        />\n\n      <wsdl:operation name=\"consultarSequencialRps\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarSequencialRpsRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarSequencialRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviarSincrono\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"enviarSincronoRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"enviarSincronoResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviar\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"enviarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"enviarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"testeEnviar\">\n\n         <wsdlsoap:operation soapAction=\"\"/>\n\
+        \n         <wsdl:input name=\"testeEnviarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"testeEnviarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarLote\">\n\n         <wsdlsoap:operation soapAction=\"\"\
+        />\n\n         <wsdl:input name=\"consultarLoteRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"consultarLoteResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarAliquotaSimplesNacional\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarAliquotaSimplesNacionalRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarAliquotaSimplesNacionalResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"consultarNotaTomada\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarNotaTomadaRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNotaTomadaResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"consultarNota\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarNotaRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNotaResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"cancelar\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"cancelarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"cancelarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNFSeRps\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"consultarNFSeRpsRequest\">\n\n       \
+        \     <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNFSeRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"https://www.issdigitalsod.com.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:binding>\n\
+        \n   <wsdl:service name=\"LoteRpsService\">\n\n      <wsdl:port binding=\"\
+        impl:LoteRpsSoapBinding\" name=\"LoteRps\">\n\n         <wsdlsoap:address\
+        \ location=\"https://issdigital.sorocaba.sp.gov.br/WsNFe2/LoteRps.jws\"/>\n\
+        \n      </wsdl:port>\n\n   </wsdl:service>\n\n</wsdl:definitions>\n"
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:29 GMT
+      Keep-Alive:
+      - timeout=15, max=300
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://www.issdigitalthe.com.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+Rby27bOBTd+ys4WnWAseQkCGZg1CncabPKpMAog3bLSLTDQiJVkoqT+fqSekWU
+        9bSp1LF3scj74OGxeO+h8/7DUxiAR8Q4pmRhndkzCyDiUR+T9cL67+56+pf14WryfsP9YO6jFSZY
+        yJkcCMjWSNzCEPEIemhhPQgRzR1ns9nYmHMfr7GAgXhAtkdD+545X/ntNTp3bqhA/0bc/r7hFpCx
+        CZ9D6eABcQqjwoscsNPHNmVr9XGqxnMLHEbBPhExEat97FUuEqXCBZeJhpDbclQNJTmrP5wcSie3
+        VDi2mqkJ2mwNl0aLJFpu9sR9bXWbi2Ti+Wx25nz758ZNnFhyV3+bTr+6n26AxxAUyAf3z2CZoA6W
+        T5jntJiDM/ti8jHGgQCUgC+eALPLP4B0dwnezS7n5xfziz/B5093v0+nV5MJACCli6QGh2sEiCTJ
+        wvIka+JA0ibBE/2IERdWOr2wiCAT2fQQEWUcfgsDC4jnSD6Sy5pzwSScJTunMMxCO+XYvdPhkfyM
+        WvKpzBcxI+PmdXvtKtoNSa0wecXsfvk+QuKhALIDyKTAhgp4YOnc0RD6cBCXSlaj0QmRRwyZi4nH
+        KKEHhtlQtF7ja+cqiIiHYXAYX76GvPoDVzF8NaZ1Zlg1GDmzA9rLZYB/xJLPrqqyEL+FnqwB5P50
+        ZuhFqwxY+IiGJVnnTiaDQ7gUMQzw/9CDdG+Pshb7G/uj7mJPXo3IJyE3CX0+EFJpyXRio81+hRqm
+        dMT9aqBeypjud2cxdXyIGt8F/d/wjS4MZh9RJu6koyx21rFVs6MRYlB1r62HkAVkRDkuEPvCfMT0
+        vS9cFl4xiWIBsqQWllrlvP28Hnao58tO4myHp7HoHz/btYGnd55BGqq6PwWqHWjrB6oJlOurx36l
+        5S6oNtQQPSsMkyiaQ68WNYNo1aM0FjqlA8QERDVHaY9Ddhew6s7JPkeoGdg0bcPo+6+s9fTSgfZ6
+        22lSTj+dxzCADYfdNqZ6rQy2al2Q1aoD8e6o3Xct9ffala4aYueaw/DevZSDRr8C21XmgDp0L+Br
+        hJ8h2tAI8BoHtg1S82C2wjgagFm5bwS7iljapaHuhFi1k+nscEwTLZWmzXJNl7v7quH7Ma5yAdD7
+        gmAQnnmXlXVQ5a7qHhN1d6U3VS6F0cd0IG/ekrTrey51LVX44eI5kNNZ5ElLBglXQbvv0NS45ezW
+        y21hniT0Yqw+Lj2R3H2WYlRIMaxfq66e+s/FlaqbQjDg2pBs3bBGjHqI2xtOVujc9vmKIJFdWVog
+        5kmRLc2RX1lQHyoObAzHXuqgq9nOpRvtX00yq6tXffuM6myOT49JIzDoeJlz4owp6xomadMqY7x9
+        7rRLJ6dEIF3hGaUqqpdz3j6JugSkk6RRk841CrN6q1RHRLb+IthJ8q+k1Y1CuTZJ7ohY1ir/nSyx
+        xqPU0ZPp1GmUa7VGGdSozh4BeZpF4ZPiTVW7HucN1KRSHwGPukXxI+RT9jTT18vSPUfsEXuV30O5
+        6cOtH21RJkDmQxfzNa2/4adVGqjQ9xniHATUgyk5dwDHqa5aJagtOFudfJY9KP1j0tXkJwAAAP//
+        AwA+2Fig0zQAAA==
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:38 GMT
+      Keep-Alive:
+      - timeout=15, max=100
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsdl:definitions targetNamespace=\"\
+        http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" xmlns:apachesoap=\"\
+        http://xml.apache.org/xml-soap\" xmlns:impl=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\"\
+        \ xmlns:intf=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" xmlns:soapenc=\"\
+        http://schemas.xmlsoap.org/soap/encoding/\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        \ xmlns:wsdlsoap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\
+        >\n<!--WSDL created by Apache Axis version: 1.3\nBuilt on Oct 05, 2005 (05:23:37\
+        \ EDT)-->\n\n   <wsdl:message name=\"consultarNotaTomadaRequest\">\n\n   \
+        \   <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"cancelarResponse\">\n\n  \
+        \    <wsdl:part name=\"cancelarReturn\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarAliquotaSimplesNacionalResponse\"\
+        >\n\n      <wsdl:part name=\"consultarAliquotaSimplesNacionalReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarResponse\">\n\n      <wsdl:part name=\"enviarReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"testeEnviarResponse\">\n\n      <wsdl:part name=\"testeEnviarReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"testeEnviarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaTomadaResponse\">\n\n      <wsdl:part name=\"consultarNotaTomadaReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarSincronoRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarAliquotaSimplesNacionalRequest\">\n\n      <wsdl:part name=\"\
+        cpfResponsavel\" type=\"xsd:string\">\n\n      </wsdl:part>\n\n      <wsdl:part\
+        \ name=\"ultimaAtualizacao\" type=\"xsd:string\">\n\n      </wsdl:part>\n\n\
+        \      <wsdl:part name=\"codCid\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarNotaResponse\">\n\
+        \n      <wsdl:part name=\"consultarNotaReturn\" type=\"xsd:string\">\n\n \
+        \     </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"consultarSequencialRpsRequest\"\
+        >\n\n      <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarSequencialRpsResponse\"\
+        >\n\n      <wsdl:part name=\"consultarSequencialRpsReturn\" type=\"xsd:string\"\
+        >\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"\
+        enviarSincronoResponse\">\n\n      <wsdl:part name=\"enviarSincronoReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarLoteRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarLoteResponse\">\n\n      <wsdl:part name=\"consultarLoteReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNFSeRpsResponse\">\n\n      <wsdl:part name=\"consultarNFSeRpsReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNFSeRpsRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"cancelarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"consultarNotaRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:portType\
+        \ name=\"LoteRps\">\n\n      <wsdl:operation name=\"consultarSequencialRps\"\
+        \ parameterOrder=\"mensagemXml\">\n\n         <wsdl:input message=\"impl:consultarSequencialRpsRequest\"\
+        \ name=\"consultarSequencialRpsRequest\">\n\n       </wsdl:input>\n\n    \
+        \     <wsdl:output message=\"impl:consultarSequencialRpsResponse\" name=\"\
+        consultarSequencialRpsResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviarSincrono\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:enviarSincronoRequest\" name=\"enviarSincronoRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarSincronoResponse\"\
+        \ name=\"enviarSincronoResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviar\" parameterOrder=\"mensagemXml\">\n\n\
+        \         <wsdl:input message=\"impl:enviarRequest\" name=\"enviarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarResponse\"\
+        \ name=\"enviarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"testeEnviar\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:testeEnviarRequest\" name=\"testeEnviarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:testeEnviarResponse\"\
+        \ name=\"testeEnviarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarLote\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarLoteRequest\" name=\"consultarLoteRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarLoteResponse\"\
+        \ name=\"consultarLoteResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarAliquotaSimplesNacional\" parameterOrder=\"\
+        cpfResponsavel ultimaAtualizacao codCid\">\n\n         <wsdl:input message=\"\
+        impl:consultarAliquotaSimplesNacionalRequest\" name=\"consultarAliquotaSimplesNacionalRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarAliquotaSimplesNacionalResponse\"\
+        \ name=\"consultarAliquotaSimplesNacionalResponse\">\n\n       </wsdl:output>\n\
+        \n      </wsdl:operation>\n\n      <wsdl:operation name=\"consultarNotaTomada\"\
+        \ parameterOrder=\"mensagemXml\">\n\n         <wsdl:input message=\"impl:consultarNotaTomadaRequest\"\
+        \ name=\"consultarNotaTomadaRequest\">\n\n       </wsdl:input>\n\n       \
+        \  <wsdl:output message=\"impl:consultarNotaTomadaResponse\" name=\"consultarNotaTomadaResponse\"\
+        >\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNota\" parameterOrder=\"mensagemXml\">\n\n         <wsdl:input\
+        \ message=\"impl:consultarNotaRequest\" name=\"consultarNotaRequest\">\n\n\
+        \       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarNotaResponse\"\
+        \ name=\"consultarNotaResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"cancelar\" parameterOrder=\"mensagemXml\">\n\
+        \n         <wsdl:input message=\"impl:cancelarRequest\" name=\"cancelarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:cancelarResponse\"\
+        \ name=\"cancelarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarNFSeRps\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarNFSeRpsRequest\" name=\"\
+        consultarNFSeRpsRequest\">\n\n       </wsdl:input>\n\n         <wsdl:output\
+        \ message=\"impl:consultarNFSeRpsResponse\" name=\"consultarNFSeRpsResponse\"\
+        >\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:portType>\n\
+        \n   <wsdl:binding name=\"LoteRpsSoapBinding\" type=\"impl:LoteRps\">\n\n\
+        \      <wsdlsoap:binding style=\"rpc\" transport=\"http://schemas.xmlsoap.org/soap/http\"\
+        />\n\n      <wsdl:operation name=\"consultarSequencialRps\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarSequencialRpsRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarSequencialRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviarSincrono\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"enviarSincronoRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"enviarSincronoResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviar\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"enviarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"enviarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"\
+        />\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"testeEnviar\">\n\n         <wsdlsoap:operation soapAction=\"\"/>\n\
+        \n         <wsdl:input name=\"testeEnviarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"testeEnviarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"\
+        />\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarLote\">\n\n         <wsdlsoap:operation soapAction=\"\"\
+        />\n\n         <wsdl:input name=\"consultarLoteRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"consultarLoteResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"\
+        />\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarAliquotaSimplesNacional\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarAliquotaSimplesNacionalRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarAliquotaSimplesNacionalResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"consultarNotaTomada\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarNotaTomadaRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNotaTomadaResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"consultarNota\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarNotaRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNotaResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"cancelar\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"cancelarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"cancelarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"\
+        />\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNFSeRps\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"consultarNFSeRpsRequest\">\n\n       \
+        \     <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNFSeRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:binding>\n\
+        \n   <wsdl:service name=\"LoteRpsService\">\n\n      <wsdl:port binding=\"\
+        impl:LoteRpsSoapBinding\" name=\"LoteRps\">\n\n         <wsdlsoap:address\
+        \ location=\"http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws\"/>\n\
+        \n      </wsdl:port>\n\n   </wsdl:service>\n\n</wsdl:definitions>\n"
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:09:43 GMT
+      Server:
+      - nginx/1.14.1
+      Transfer-Encoding:
+      - chunked
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: '<?xml version=''1.0'' encoding=''UTF-8''?><!-- Published by JAX-WS
+        RI at http://jax-ws.dev.java.net. RI''s version is JAX-WS RI 2.1.3-hudson-390-.
+        --><!-- Generated by JAX-WS RI at http://jax-ws.dev.java.net. RI''s version
+        is JAX-WS RI 2.1.3-hudson-390-. --><definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/"
+        targetNamespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        name="LoteRpsService">
+
+        <types />
+
+        <message name="consultarSequencialRps">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarSequencialRpsResponse">
+
+        <part name="consultarSequencialRpsReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="enviarSincrono">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="enviarSincronoResponse">
+
+        <part name="enviarSincronoReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="testeEnviar">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="testeEnviarResponse">
+
+        <part name="testeEnviarReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="enviar">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="enviarResponse">
+
+        <part name="enviarReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarLote">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarLoteResponse">
+
+        <part name="consultarLoteReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarNota">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarNotaResponse">
+
+        <part name="consultarNotaReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="cancelar">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="cancelarResponse">
+
+        <part name="cancelarReturn" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarNFSeRps">
+
+        <part name="mensagemXml" type="xsd:string" />
+
+        </message>
+
+        <message name="consultarNFSeRpsResponse">
+
+        <part name="consultarNFSeRpsReturn" type="xsd:string" />
+
+        </message>
+
+        <portType name="LoteRps">
+
+        <operation name="consultarSequencialRps">
+
+        <input message="tns:consultarSequencialRps" />
+
+        <output message="tns:consultarSequencialRpsResponse" />
+
+        </operation>
+
+        <operation name="enviarSincrono">
+
+        <input message="tns:enviarSincrono" />
+
+        <output message="tns:enviarSincronoResponse" />
+
+        </operation>
+
+        <operation name="testeEnviar">
+
+        <input message="tns:testeEnviar" />
+
+        <output message="tns:testeEnviarResponse" />
+
+        </operation>
+
+        <operation name="enviar">
+
+        <input message="tns:enviar" />
+
+        <output message="tns:enviarResponse" />
+
+        </operation>
+
+        <operation name="consultarLote">
+
+        <input message="tns:consultarLote" />
+
+        <output message="tns:consultarLoteResponse" />
+
+        </operation>
+
+        <operation name="consultarNota">
+
+        <input message="tns:consultarNota" />
+
+        <output message="tns:consultarNotaResponse" />
+
+        </operation>
+
+        <operation name="cancelar">
+
+        <input message="tns:cancelar" />
+
+        <output message="tns:cancelarResponse" />
+
+        </operation>
+
+        <operation name="consultarNFSeRps">
+
+        <input message="tns:consultarNFSeRps" />
+
+        <output message="tns:consultarNFSeRpsResponse" />
+
+        </operation>
+
+        </portType>
+
+        <binding name="LoteRpsBinding" type="tns:LoteRps">
+
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"
+        />
+
+        <operation name="consultarSequencialRps">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="enviarSincrono">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="testeEnviar">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="enviar">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="consultarLote">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="consultarNota">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="cancelar">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        <operation name="consultarNFSeRps">
+
+        <soap:operation soapAction="" />
+
+        <input>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </input>
+
+        <output>
+
+        <soap:body use="literal" namespace="http://sistemas.semfaz.saoluis.ma.gov.br/WsNFe2/LoteRps.jws"
+        />
+
+        </output>
+
+        </operation>
+
+        </binding>
+
+        <service name="LoteRpsService">
+
+        <port name="LoteRps" binding="tns:LoteRpsBinding">
+
+        <soap:address location="http://sistemas.semfaz.saoluis.ma.gov.br:80/WsNFe2/LoteRps"
+        />
+
+        </port>
+
+        </service>
+
+        </definitions>'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:36 GMT
+      Keep-Alive:
+      - timeout=6, max=4096
+      Server:
+      - Apache-Coyote/1.1
+      Transfer-Encoding:
+      - chunked
+      X-Powered-By:
+      - 'Servlet 2.4; JBoss-4.2.3.GA (build: SVNTag=JBoss_4_2_3_GA date=200807181417)/JBossWeb-2.0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws?wsdl
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsdl:definitions targetNamespace=\"\
+        http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" xmlns:apachesoap=\"\
+        http://xml.apache.org/xml-soap\" xmlns:impl=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\"\
+        \ xmlns:intf=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" xmlns:soapenc=\"\
+        http://schemas.xmlsoap.org/soap/encoding/\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\"\
+        \ xmlns:wsdlsoap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\
+        >\n<!--WSDL created by Apache Axis version: 1.3\nBuilt on Oct 05, 2005 (05:23:37\
+        \ EDT)-->\n\n   <wsdl:message name=\"consultarNFSeRpsResponse\">\n\n     \
+        \ <wsdl:part name=\"consultarNFSeRpsReturn\" type=\"xsd:string\">\n\n    \
+        \  </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"consultarNotaRequest\"\
+        >\n\n      <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"cancelarRequest\">\n\n   \
+        \   <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarNFSeRpsRequest\"\
+        >\n\n      <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarLoteRequest\">\n\n\
+        \      <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarLoteResponse\">\n\
+        \n      <wsdl:part name=\"consultarLoteReturn\" type=\"xsd:string\">\n\n \
+        \     </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"consultarSequencialRpsRequest\"\
+        >\n\n      <wsdl:part name=\"mensagemXml\" type=\"xsd:string\">\n\n      </wsdl:part>\n\
+        \n   </wsdl:message>\n\n   <wsdl:message name=\"consultarNotaResponse\">\n\
+        \n      <wsdl:part name=\"consultarNotaReturn\" type=\"xsd:string\">\n\n \
+        \     </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"consultarSequencialRpsResponse\"\
+        >\n\n      <wsdl:part name=\"consultarSequencialRpsReturn\" type=\"xsd:string\"\
+        >\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message name=\"\
+        enviarSincronoResponse\">\n\n      <wsdl:part name=\"enviarSincronoReturn\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarRequest\">\n\n      <wsdl:part name=\"mensagemXml\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarSincronoRequest\">\n\n      <wsdl:part name=\"mensagemXml\"\
+        \ type=\"xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"enviarResponse\">\n\n      <wsdl:part name=\"enviarReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:message\
+        \ name=\"cancelarResponse\">\n\n      <wsdl:part name=\"cancelarReturn\" type=\"\
+        xsd:string\">\n\n      </wsdl:part>\n\n   </wsdl:message>\n\n   <wsdl:portType\
+        \ name=\"LoteRps\">\n\n      <wsdl:operation name=\"consultarSequencialRps\"\
+        \ parameterOrder=\"mensagemXml\">\n\n         <wsdl:input message=\"impl:consultarSequencialRpsRequest\"\
+        \ name=\"consultarSequencialRpsRequest\">\n\n       </wsdl:input>\n\n    \
+        \     <wsdl:output message=\"impl:consultarSequencialRpsResponse\" name=\"\
+        consultarSequencialRpsResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviarSincrono\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:enviarSincronoRequest\" name=\"enviarSincronoRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarSincronoResponse\"\
+        \ name=\"enviarSincronoResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"enviar\" parameterOrder=\"mensagemXml\">\n\n\
+        \         <wsdl:input message=\"impl:enviarRequest\" name=\"enviarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:enviarResponse\"\
+        \ name=\"enviarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarLote\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarLoteRequest\" name=\"consultarLoteRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarLoteResponse\"\
+        \ name=\"consultarLoteResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarNota\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarNotaRequest\" name=\"consultarNotaRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:consultarNotaResponse\"\
+        \ name=\"consultarNotaResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"cancelar\" parameterOrder=\"mensagemXml\">\n\
+        \n         <wsdl:input message=\"impl:cancelarRequest\" name=\"cancelarRequest\"\
+        >\n\n       </wsdl:input>\n\n         <wsdl:output message=\"impl:cancelarResponse\"\
+        \ name=\"cancelarResponse\">\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\
+        \n      <wsdl:operation name=\"consultarNFSeRps\" parameterOrder=\"mensagemXml\"\
+        >\n\n         <wsdl:input message=\"impl:consultarNFSeRpsRequest\" name=\"\
+        consultarNFSeRpsRequest\">\n\n       </wsdl:input>\n\n         <wsdl:output\
+        \ message=\"impl:consultarNFSeRpsResponse\" name=\"consultarNFSeRpsResponse\"\
+        >\n\n       </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:portType>\n\
+        \n   <wsdl:binding name=\"LoteRpsSoapBinding\" type=\"impl:LoteRps\">\n\n\
+        \      <wsdlsoap:binding style=\"rpc\" transport=\"http://schemas.xmlsoap.org/soap/http\"\
+        />\n\n      <wsdl:operation name=\"consultarSequencialRps\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"consultarSequencialRpsRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarSequencialRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviarSincrono\">\n\n         <wsdlsoap:operation\
+        \ soapAction=\"\"/>\n\n         <wsdl:input name=\"enviarSincronoRequest\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"enviarSincronoResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n    \
+        \  <wsdl:operation name=\"enviar\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"enviarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"enviarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarLote\">\n\n         <wsdlsoap:operation soapAction=\"\"\
+        />\n\n         <wsdl:input name=\"consultarLoteRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"consultarLoteResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNota\">\n\n         <wsdlsoap:operation soapAction=\"\"\
+        />\n\n         <wsdl:input name=\"consultarNotaRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"consultarNotaResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"cancelar\">\n\n         <wsdlsoap:operation soapAction=\"\"/>\n\n\
+        \         <wsdl:input name=\"cancelarRequest\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n         </wsdl:input>\n\
+        \n         <wsdl:output name=\"cancelarResponse\">\n\n            <wsdlsoap:body\
+        \ encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" namespace=\"\
+        http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"encoded\"/>\n\n\
+        \         </wsdl:output>\n\n      </wsdl:operation>\n\n      <wsdl:operation\
+        \ name=\"consultarNFSeRps\">\n\n         <wsdlsoap:operation soapAction=\"\
+        \"/>\n\n         <wsdl:input name=\"consultarNFSeRpsRequest\">\n\n       \
+        \     <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://proces.wsnfe2.dsfnet.com.br\" use=\"encoded\"/>\n\n \
+        \        </wsdl:input>\n\n         <wsdl:output name=\"consultarNFSeRpsResponse\"\
+        >\n\n            <wsdlsoap:body encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\
+        \ namespace=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\" use=\"\
+        encoded\"/>\n\n         </wsdl:output>\n\n      </wsdl:operation>\n\n   </wsdl:binding>\n\
+        \n   <wsdl:service name=\"LoteRpsService\">\n\n      <wsdl:port binding=\"\
+        impl:LoteRpsSoapBinding\" name=\"LoteRps\">\n\n         <wsdlsoap:address\
+        \ location=\"http://issdigital.pmcg.ms.gov.br/WsNFe2/LoteRps.jws\"/>\n\n \
+        \     </wsdl:port>\n\n   </wsdl:service>\n\n</wsdl:definitions>\n"
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:35 GMT
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://homologacao.ginfes.com.br/ServiceGinfesImpl?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAO1aTY+bMBC976/gxg1nu7eIRGp7qCptt1VSVb1VXnAIEsGWbZrNv+/YmGwSvpLg
+        QKRyCpDxjN+bsZkH+CFZxWksY5oKJ8UbMnOXhP+NA/IlTldEfN2wxFxwHYl5ROQLWAmGAzBdS8mm
+        CK3phiY0wgGmXqSHeQHdeK/cdd42SSr2hiJYkw0WHlwVFDOP8ghtRZggYzhVV9ut1dl+iDzw3zaR
+        6ZsI98bb7dbbPmmvHyaTR/T72/NSR3TnD44vd4yIuY/yX7gAoAWOSB1Jfz7jNCAJ5i8rQRZAEBBK
+        lCfHZ5hLM4wTmfEUmASvMxdmMxWSx2nkQiRlpgIhE+nSoL+e+gsLUbJEFnFL8aBOJo3RTq0f7c1t
+        QQLCAqhnzJ+pJAsmhiLmB+UDRTfAL8/LdeGWsczUmjNh+8d7MoE7q8jTtPTGT9VSuE9m3pfLQDXb
+        V1gFtM9YQ+19Q+64g+2397q6+r8PlneeGxd9OeAd3IUGaQP73F2KDue+yv6oJ+51aoxy+RNs6+aW
+        T4YywrFSXMbsKHsO+IWrkvDvPCTczFeNc/w4ZZl0TLyZC8pn2lYLPtKD8vE0kxc6eK9gH+WjNQK0
+        h9AKCDJQCcnRzF6JS6W1I7LD1XkRttMeu3vCSl37NdBqe8wu4Owlr+JOaQFl5yRaWnLH3V0XYB0W
+        XUUvbRdZ0aB3xXfapXVEab9Ij29tduBaKdXbQLUBsjO8Uz1mr3RLSq8L1tpHHTZA209vxYMRi+iv
+        TXqFOuic7irFcQXUJh3RDaK15FY/1bGC9byEQu9r+lx18hqnIbTEdS3vp/zvooeunEneFqun+tPC
+        m5C7RAklFsBIjlOhQja+GdAvBdT/LmrvsnOadMR3O3X6MVCHMzd3YjKiD4sJ0nCnPZ79CiQTYJbE
+        kHWcFG7LybpBjKsb9pGd5pZ/5KdNNYwMNeiNkZxW4TJSdIbqGUlqVEojPecprZGnc8XZyFSbjBsZ
+        aleB/zVHPjIKTx2LXAi2fXemvSj955ixNTJyLzVr/MGNUx6yj8OQg0J2EhrgnPk2sAiVtWuuNrUk
+        1vgMqPmDjw6+rZv/A8VzXghpJwAA
+    headers:
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/xml
+      Date:
+      - Fri, 06 Nov 2020 13:10:37 GMT
+      Server:
+      - nginx
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://homologacao.notacarioca.rio.gov.br/WSNacional/nfse.asmx?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcpl
+        VmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Hu8W
+        ZXqZ101RLT/7aHe881GaL6fVrFhefPbRuj3fPvjo9zj6jZPHV82sfDTLz4tl0VLTJqX3ls2j5rOP
+        5m27enT37tXV1fjq3riqL+7u7ezs3v29v3j+ejrPF9lHpmmVrXb3bPuGv2zG9CW+4RfRyV38tbt3
+        17yG5je/hO/tK4tikd/8ClrZV9qlG8myarNpVhfVNBvTv+OL6nI8qW1TQLFtB6HjL/tKu7AvLIpp
+        XTXVeTueVgtpyoi0+bv2i6ydzonw9j0AodmwL8d6wy93qRFPGb3ZZvVF3r7IFnmzyqaODjeMCpjY
+        trF+0ODuR8QKaSrM0F6v8ob/pk8IV34nzct8kS/bZ1W9eJqfZ+uy/eyjX7TOyuK8yGfvj53C5x4U
+        dLqktz/76ISYkKBn9YvzJn+V/6J13rSuOb9AFF6V+bs3hKj3BX/V4IXlNPycvzG9LIrll9Ppuia+
+        IJlYZO/MX7sfKQbFcrVuic1pVNTDZx8R1LamSfgovRuAfXyXvun3h49jGOJzRcJ9Zj/Svjujb1b0
+        d/7DHX61bv9fMv6XVf1q1fz85gFDg5+/nPC8anMmAcH/eckGlgA/f3ngddGuyY5UlhTUz89LXugR
+        4ucdT7zKp/lqSq6qJxjUw88nboiR4OcdH5xkBKwUI/nzjgPCwf+8m/vP89qMnQD/fJp4b+T//551
+        fCKhJ3/wmONULzaVWJXCzSa7yBU7ayVBoNcU4J4tDXmk+SqrDSHpV/rZUoKEEiPS82cfUbbgUQDE
+        8JeOTrHQXuUj/xOFHYAAHl+uLYtKe+r9fRHR6f4ATCSUAD4fTBcB9Q1QRwABpw+nkcD6UEqpRQVK
+        H0QmhfOBNFIowObDCKSAPpQ6Hf8TeH0QlTrwPpBaHWjA7sOo1gH4NanX99eA2dehWx/S16NYHw4w
+        +lq06oP6mlTyfRpg83Xo48P4epTxIQCLr0UTH8jXpIY19EDi65DCAvh6dLCvo/+vRQQL4dYUWFV1
+        C7dAIeNd9B52Xa0ILpYqtJWVVTQ3TU1jdtVS7UnQCtoDPBFXEcMj74mfc8OLoIp9UwdlsTMfh5/G
+        cBaz9b6Yy1tA42vh717/Bkahcv8+Q9BXgMB74++9+w0g31Hx7zOIzqtA6L0HE4Hx9QfV18W3GE7/
+        JSBx24HE3/76Q/BV5y2Q95uj49ui3X3v6yNs1dwtsLVt0eVtUQ1euhlP/dDoUvmMP5oUS6wlKt4G
+        oonk0JX9jN+i97BKaN9r62xJmrwm/a6rexKgheuJ+IWXbT08uXuLpiJgRQC9mh6pMQB4jfHn8RS/
+        2m4HFhVDgGnTXpfUzayarmGUHDrUByPEE2Q/o0/R1aNJNbtO1w29WRZk1bIyeFGIG74p0GTq7If0
+        8a3BBa+azwwBzMfhpzEaik4XStIbioB7BX9+DUoq2J9f9FRd9o0S08D8+UXJjoH7Rinahf3zgrJ9
+        i/tN0DQC9ecFNX1H4JugYwDv5wUFrX/yTZDPAfv/Fe30Q/Wk5CP+pMnry2LqR7yGivI93C3vS3bO
+        UgUT99noTUY8m81qciPTkigMPITyDZF+Xi2qsrog8lfjgWn47usXGSuD8u6S4I+zZvHODVxHA9z4
+        E/1bx0If6Qez/LxYFui8Ofp/AE6j1zWRKAAA
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1338'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:42 GMT
+      Server:
+      - ''
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9RaXW+bMBR9Xn+Fl5c8Ac3ahylKUlWdNm1qu6rZtL464CZUBBg2Sfrvd8EmGILN
+        56T2qcX4Hp97MPdco8yuDlsP7UhE3cCfjyfm+RgR3w4c11/Px79/fTU+j68Ws4+GgR7ilefSDXHQ
+        6hX9uH4y/izR43eEGdowFk4t6wUfjD01HbIzX/AOmz5hJswY0wwfuVQK/GROzEtjdT4xTGQYi9me
+        Ot7UIc+u7zKYTBEw8+mUBjicj8QS1N6QLaYm3ErGzSBaW0mclVxZIxGyp8cA4LPauJSa4WpjroOd
+        uYryWY5XD5zNPlAnB93vzf1FOufT+fnEerq7XabxI+TjLZmP/GdKRojhaE3YPYzQENtEy2lx9oEL
+        wF5DQuHqwwxWnHJabZFEsB1sQ48cfgGi4OX6Ycz4DIFP/sbwuAkf4mPEI1viMymVG7wi9h1dQ0qA
+        NR+lkSyCLTJCW9f/adtxBJJP4AofpCtLD/sFOwHtDjuzTjLgQ1LeOjGCmLVWg8fA867i3IlXEf8G
+        Q4iHo3uQ5zFBoCxbaU+n/PGJdWqjaQgvEZHCRcKaeAiIPdhstwEjjyHtwOAEQcciLSs1QDVKJJWj
+        BY6GTYrUAOQhiL5i94B7iFOE6fGcBFC/RyWD9OCydFmMbRz03zsnSO1ZPRKbhDa4SI+9XIXRnsk3
+        EnV9naVQ/bqi4qRekRiJVXAS7itgHRSviabOpEjp3BBHDAku6WqVZYkjwVz4y8DgORmxuFiu0fIi
+        ucbrZ2L0IaCodDoOquI4KI0GWihLbDMivFhq2RR2hVxh6yjV7g8JrMRLvlPPLZOpPTmdWDXs6omV
+        vaHJY6z0lCH2VKXLtGc05Nt26lct+Az9zlX4Xls2Q2qj8M8mlFTW+19otZBKaeQ9iKmdXcNI0w4M
+        TKVeHV1b0YPMSZ+hoXDakwyzcH3yFS1Nq6XDIGLSES49Z+fLBSHAJ98OKtoMcS5O56WNFxLY6gbH
+        kkJ4v6WJydIRDVmRj4Ziyc1raKp6kDqqyp5BQbdgqUrOXNfiEayOeUnhimAd/7LWBf8vZyFOdA2S
+        yNyuofqVlt30EVS7a9dtk7tRO+5dNk+V83XlXbKGhuRVRtc0A6UhtUzjtIbrE9D4Tw11nVu0JH2s
+        vXqup+ZQQ7GipquYiaGsii/Osrq+cv3ki7NU1pc/rx+k825e6ZPPs8f5lL16MMEJ7DjxGAiIsE8T
+        fO2X3fRrcXI/o9rUPtLF83nJ5bWd/Kv7JGsVgApypvKLz4Y8scB5RTGF1T0X3BB7x/lWKUB+Hm0Q
+        8ojeLtVRjTLYW1akuxH2FCfbKyp3Ld7QZVpEsFQQBfV6gVdgDOfNA8h6RHzLG6+98w+jzFt/ITt2
+        Fj3FKYO+R4WUTUs3bSrg3qMq5a6omxg5ypvWQAyJ7ul4qqYk2rl2dqhO0vizXPIx+TAPXRUSocee
+        jLdppbZNUhI7TgS9IvICG+cqUpAx1dBx1y7DniTl9PLygt8z9tTyn8vtZMIiz0QwB5/h19LPBxb/
+        AAAA//8DAKf/WcvbIAAA
+    headers:
+      Cache-Control:
+      - private
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:40 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Keep-Alive:
+      - timeout=15, max=100
+      Server:
+      - Apache/2.2.22 (Debian)
+      Set-Cookie:
+      - dtCookie=v_4_srv_1_sn_CC488548ECC5B346F336455FFB13BDE8_perc_100000_ol_0_mul_1;
+        Path=/; Domain=.pbh.gov.br
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-OneAgent-JS-Injection:
+      - 'true'
+    status:
+      code: 200
+      message: '200'
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: http://wshomologacao.simplissweb.com.br/nfseservice.svc?singleWsdl
+  response:
+    body:
+      string: <?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="NfseService"
+        targetNamespace="http://www.sistema.com.br/Sistema.Ws.Nfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+        xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+        xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+        xmlns:tns="http://www.sistema.com.br/Sistema.Ws.Nfse" xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+        xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"><wsdl:types><xs:schema
+        elementFormDefault="qualified" targetNamespace="http://www.sistema.com.br/Sistema.Ws.Nfse"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:import
+        namespace="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/><xs:element name="Versao"><xs:complexType/></xs:element><xs:element
+        name="VersaoResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="VersaoResult" type="xs:string"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="RecepcionarLoteRps"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="EnviarLoteRpsEnvio" type="q1:EnviarLoteRpsEnvio" xmlns:q1="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q2:ddDuasStrings" xmlns:q2="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="RecepcionarLoteRpsResponse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="RecepcionarLoteRpsResult" type="q3:EnviarLoteRpsResposta"
+        xmlns:q3="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarSituacaoLoteRps"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarSituacaoLoteRpsEnvio" type="q4:ConsultarSituacaoLoteRpsEnvio"
+        xmlns:q4="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q5:ddDuasStrings" xmlns:q5="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarSituacaoLoteRpsResponse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="ConsultarSituacaoLoteRpsResult" type="q6:ConsultarSituacaoLoteRpsResposta"
+        xmlns:q6="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarNfsePorRps"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarNfseRpsEnvio" type="q7:ConsultarNfseRpsEnvio"
+        xmlns:q7="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q8:ddDuasStrings" xmlns:q8="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarNfsePorRpsResponse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="ConsultarNfsePorRpsResult" type="q9:ConsultarNfseRpsResposta"
+        xmlns:q9="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarNfse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarNfseEnvio" type="q10:ConsultarNfseEnvio" xmlns:q10="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q11:ddDuasStrings" xmlns:q11="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarNfseResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarNfseResult" type="q12:ConsultarNfseResposta"
+        xmlns:q12="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarLoteRps"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarLoteRpsEnvio" type="q13:ConsultarLoteRpsEnvio"
+        xmlns:q13="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q14:ddDuasStrings" xmlns:q14="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="ConsultarLoteRpsResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="ConsultarLoteRpsResult" type="q15:ConsultarLoteRpsResposta"
+        xmlns:q15="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="CancelarNfse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="CancelarNfseEnvio" type="q16:CancelarNfseEnvio" xmlns:q16="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q17:ddDuasStrings" xmlns:q17="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="CancelarNfseResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="CancelarNfseResult" type="q18:CancelarNfseResposta" xmlns:q18="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="GerarNfse"><xs:complexType><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="GerarNovaNfseEnvio" type="q19:GerarNovaNfseEnvio" xmlns:q19="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/><xs:element
+        minOccurs="0" maxOccurs="1" name="pParam" type="q20:ddDuasStrings" xmlns:q20="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"/></xs:sequence></xs:complexType></xs:element><xs:element
+        name="GerarNfseResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="GerarNfseResult" type="q21:GerarNovaNfseResposta" xmlns:q21="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"/></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema
+        elementFormDefault="qualified" targetNamespace="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"><xs:import
+        namespace="http://www.w3.org/2000/09/xmldsig#"/><xs:complexType name="EnviarLoteRpsEnvio"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="LoteRps" type="tns:tcLoteRps"/><xs:element
+        minOccurs="0" maxOccurs="1" ref="q1:Signature" xmlns:q1="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcLoteRps"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="NumeroLote"
+        type="xs:nonNegativeInteger"/><xs:element minOccurs="0" maxOccurs="1" name="Cnpj"
+        type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal"
+        type="xs:string"/><xs:element minOccurs="1" maxOccurs="1" name="QuantidadeRps"
+        type="xs:int"/><xs:element minOccurs="0" maxOccurs="1" name="ListaRps" type="tns:ArrayOfTcRps"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="ArrayOfTcRps"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="Rps" type="tns:tcRps"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcRps"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="InfRps"
+        type="tns:tcInfRps"/><xs:element minOccurs="0" maxOccurs="1" ref="q2:Signature"
+        xmlns:q2="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcInfRps"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="IdentificacaoRps"
+        type="tns:tcIdentificacaoRps"/><xs:element minOccurs="1" maxOccurs="1" name="DataEmissao"
+        type="xs:dateTime"/><xs:element minOccurs="1" maxOccurs="1" name="NaturezaOperacao"
+        type="xs:byte"/><xs:element minOccurs="0" maxOccurs="1" name="RegimeEspecialTributacao"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="OptanteSimplesNacional"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="IncentivadorCultural"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="Status" type="xs:byte"/><xs:element
+        minOccurs="0" maxOccurs="1" name="RpsSubstituido" type="tns:tcIdentificacaoRps"/><xs:element
+        minOccurs="0" maxOccurs="1" name="OutrasInformacoes" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Servico" type="tns:tcDadosServico"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Tomador" type="tns:tcDadosTomador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ContrucaoCivil" type="tns:tcDadosConstrucaoCivil"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="tcIdentificacaoRps"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Serie" type="xs:string"/><xs:element minOccurs="1"
+        maxOccurs="1" name="Tipo" type="xs:byte"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcDadosServico"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Valores" type="tns:tcValores"/><xs:element minOccurs="0" maxOccurs="1"
+        name="ItemListaServico" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1"
+        name="CodigoCnae" type="xs:int"/><xs:element minOccurs="0" maxOccurs="1" name="CodigoTributacaoMunicipio"
+        type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="Discriminacao"
+        type="xs:string"/><xs:element minOccurs="1" maxOccurs="1" name="CodigoMunicipio"
+        type="xs:int"/><xs:element minOccurs="0" maxOccurs="unbounded" name="ItensServico"
+        type="tns:tcItemServico"/></xs:sequence></xs:complexType><xs:complexType name="tcValores"><xs:sequence><xs:element
+        minOccurs="1" maxOccurs="1" name="ValorServicos" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorDeducoes" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorPis" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorCofins" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorInss" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorIr" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorCsll" type="xs:decimal"/><xs:element
+        minOccurs="1" maxOccurs="1" name="IssRetido" type="xs:byte"/><xs:element minOccurs="0"
+        maxOccurs="1" name="ValorIss" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="ValorIssRetido" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="OutrasRetencoes" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="BaseCalculo" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Aliquota" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="ValorLiquidoNfse" type="xs:decimal"/><xs:element minOccurs="0"
+        maxOccurs="1" name="DescontoIncondicionado" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="DescontoCondicionado" type="xs:decimal"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcItemServico"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Descricao" type="xs:string"/><xs:element minOccurs="1" maxOccurs="1"
+        name="Quantidade" type="xs:decimal"/><xs:element minOccurs="1" maxOccurs="1"
+        name="ValorUnitario" type="xs:decimal"/><xs:element minOccurs="0" maxOccurs="1"
+        name="IssTributavel" type="xs:byte"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcIdentificacaoPrestador"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Cnpj" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal"
+        type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="tcDadosTomador"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="IdentificacaoTomador" type="tns:tcIdentificacaoTomador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="RazaoSocial" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Endereco" type="tns:tcEndereco"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Contato" type="tns:tcContato"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcIdentificacaoTomador"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="CpfCnpj" type="tns:tcCpfCnpj"/><xs:element minOccurs="0" maxOccurs="1"
+        name="InscricaoMunicipal" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1"
+        name="InscricaoEstadual" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcCpfCnpj"><xs:sequence><xs:choice minOccurs="1" maxOccurs="1"><xs:element
+        minOccurs="0" maxOccurs="1" name="Cnpj" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Cpf" type="xs:string"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="tcEndereco"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="Endereco"
+        type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="Numero" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Complemento" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Bairro" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="CodigoMunicipio" type="xs:int"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Uf" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1"
+        name="Cep" type="xs:int"/></xs:sequence></xs:complexType><xs:complexType name="tcContato"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Telefone" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Email" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcIdentificacaoIntermediarioServico"><xs:sequence><xs:element minOccurs="0"
+        maxOccurs="1" name="RazaoSocial" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="CpfCnpj" type="tns:tcCpfCnpj"/><xs:element minOccurs="0"
+        maxOccurs="1" name="InscricaoMunicipal" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcDadosConstrucaoCivil"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="CodigoObra" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1"
+        name="Art" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="EnviarLoteRpsResposta"><xs:sequence><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        minOccurs="1" maxOccurs="1" name="DataRecebimento" type="xs:dateTime"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="NumeroLote" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Protocolo" type="xs:string"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="tcMensagemRetorno"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Codigo" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="Mensagem"
+        type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="Correcao"
+        type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="ConsultarSituacaoLoteRpsEnvio"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Protocolo" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarSituacaoLoteRpsResposta"><xs:sequence><xs:choice minOccurs="0"
+        maxOccurs="unbounded"><xs:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="NumeroLote" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="1" maxOccurs="1" name="Situacao" type="xs:byte"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarNfseRpsEnvio"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="IdentificacaoRps" type="tns:tcIdentificacaoRps"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador"/></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarNfseRpsResposta"><xs:sequence><xs:choice minOccurs="1" maxOccurs="1"><xs:element
+        minOccurs="0" maxOccurs="1" name="CompNfse" type="tns:tcCompNfse"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="tcCompNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="Nfse"
+        type="tns:tcNfse"/><xs:element minOccurs="0" maxOccurs="1" name="NfseCancelamento"
+        type="tns:tcCancelamentoNfse"/><xs:element minOccurs="0" maxOccurs="1" name="NfseSubstituicao"
+        type="tns:tcSubstituicaoNfse"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="InfNfse"
+        type="tns:tcInfNfse"/><xs:element minOccurs="0" maxOccurs="unbounded" ref="q3:Signature"
+        xmlns:q3="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcInfNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="Numero"
+        type="xs:nonNegativeInteger"/><xs:element minOccurs="0" maxOccurs="1" name="CodigoVerificacao"
+        type="xs:string"/><xs:element minOccurs="1" maxOccurs="1" name="DataEmissao"
+        type="xs:dateTime"/><xs:element minOccurs="0" maxOccurs="1" name="IdentificacaoRps"
+        type="tns:tcIdentificacaoRps"/><xs:element minOccurs="0" maxOccurs="1" name="DataEmissaoRps"
+        type="xs:date"/><xs:element minOccurs="1" maxOccurs="1" name="NaturezaOperacao"
+        type="xs:byte"/><xs:element minOccurs="0" maxOccurs="1" name="RegimeEspecialTributacao"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="OptanteSimplesNacional"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="IncentivadorCultural"
+        type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1" name="Competencia"
+        type="xs:dateTime"/><xs:element minOccurs="0" maxOccurs="1" name="NfseSubstituida"
+        type="xs:nonNegativeInteger"/><xs:element minOccurs="0" maxOccurs="1" name="OutrasInformacoes"
+        type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="Servico" type="tns:tcDadosServico"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ValorCredito" type="xs:decimal"/><xs:element
+        minOccurs="0" maxOccurs="1" name="PrestadorServico" type="tns:tcDadosPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="TomadorServico" type="tns:tcDadosTomador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/><xs:element
+        minOccurs="0" maxOccurs="1" name="OrgaoGerador" type="tns:tcIdentificacaoOrgaoGerador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ContrucaoCivil" type="tns:tcDadosConstrucaoCivil"/><xs:element
+        minOccurs="0" maxOccurs="1" name="MotivoCancelamento" type="xs:string"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="tcDadosPrestador"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="IdentificacaoPrestador" type="tns:tcIdentificacaoPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="RazaoSocial" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="NomeFantasia" type="xs:string"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Endereco" type="tns:tcEndereco"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Contato" type="tns:tcContato"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcIdentificacaoOrgaoGerador"><xs:sequence><xs:element minOccurs="1"
+        maxOccurs="1" name="CodigoMunicipio" type="xs:int"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Uf" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcCancelamentoNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Confirmacao" type="tns:tcConfirmacaoCancelamento"/><xs:element minOccurs="0"
+        maxOccurs="1" ref="q4:Signature" xmlns:q4="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcConfirmacaoCancelamento"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Pedido" type="tns:tcPedidoCancelamento"/><xs:element minOccurs="1" maxOccurs="1"
+        name="DataHoraCancelamento" type="xs:dateTime"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="tcPedidoCancelamento"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="InfPedidoCancelamento" type="tns:tcInfPedidoCancelamento"/><xs:element
+        minOccurs="0" maxOccurs="1" ref="q5:Signature" xmlns:q5="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcInfPedidoCancelamento"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="IdentificacaoNfse" type="tns:tcIdentificacaoNfse"/><xs:element minOccurs="0"
+        maxOccurs="1" name="CodigoCancelamento" type="xs:string"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="tcIdentificacaoNfse"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Cnpj" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="InscricaoMunicipal" type="xs:string"/><xs:element minOccurs="1"
+        maxOccurs="1" name="CodigoMunicipio" type="xs:int"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcSubstituicaoNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="SubstituicaoNfse" type="tns:tcInfSubstituicaoNfse"/><xs:element minOccurs="0"
+        maxOccurs="unbounded" ref="q6:Signature" xmlns:q6="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcInfSubstituicaoNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="NfseSubstituidora" type="xs:nonNegativeInteger"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="ConsultarNfseEnvio"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Prestador" type="tns:tcIdentificacaoPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="NumeroNfse" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="0" maxOccurs="1" name="PeriodoEmissao"><xs:complexType><xs:sequence><xs:element
+        minOccurs="1" maxOccurs="1" name="DataInicial" type="xs:date"/><xs:element
+        minOccurs="1" maxOccurs="1" name="DataFinal" type="xs:date"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="Tomador" type="tns:tcIdentificacaoTomador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarNfseResposta"><xs:sequence><xs:choice minOccurs="1" maxOccurs="1"><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaNfse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse"/></xs:sequence></xs:complexType></xs:element></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarLoteRpsEnvio"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Prestador" type="tns:tcIdentificacaoPrestador"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Protocolo" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType
+        name="ConsultarLoteRpsResposta"><xs:sequence><xs:choice minOccurs="1" maxOccurs="1"><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaNfse"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse"/></xs:sequence></xs:complexType></xs:element></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="CancelarNfseEnvio"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Pedido" type="tns:tcPedidoCancelamento"/></xs:sequence></xs:complexType><xs:complexType
+        name="CancelarNfseResposta"><xs:sequence><xs:choice minOccurs="1" maxOccurs="1"><xs:element
+        minOccurs="0" maxOccurs="1" name="Cancelamento" type="tns:tcCancelamentoNfse"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="GerarNovaNfseEnvio"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Prestador" type="tns:tcIdentificacaoPrestador"/><xs:element minOccurs="0"
+        maxOccurs="1" name="InformacaoNfse" type="tns:tcInfNovaNfse"/><xs:element
+        minOccurs="0" maxOccurs="1" ref="q7:Signature" xmlns:q7="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcInfNovaNfse"><xs:sequence><xs:element minOccurs="1" maxOccurs="1"
+        name="NaturezaOperacao" type="xs:byte"/><xs:element minOccurs="0" maxOccurs="1"
+        name="RegimeEspecialTributacao" type="xs:byte"/><xs:element minOccurs="1"
+        maxOccurs="1" name="OptanteSimplesNacional" type="xs:byte"/><xs:element minOccurs="1"
+        maxOccurs="1" name="IncentivadorCultural" type="xs:byte"/><xs:element minOccurs="1"
+        maxOccurs="1" name="Status" type="xs:byte"/><xs:element minOccurs="1" maxOccurs="1"
+        name="Competencia" type="xs:dateTime"/><xs:element minOccurs="0" maxOccurs="1"
+        name="NfseSubstituida" type="xs:nonNegativeInteger"/><xs:element minOccurs="0"
+        maxOccurs="1" name="OutrasInformacoes" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Servico" type="tns:tcDadosServico"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Tomador" type="tns:tcDadosTomador"/><xs:element minOccurs="0"
+        maxOccurs="1" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/><xs:element
+        minOccurs="0" maxOccurs="1" name="ContrucaoCivil" type="tns:tcDadosConstrucaoCivil"/><xs:element
+        minOccurs="0" maxOccurs="1" name="MotivoCancelamento" type="xs:string"/></xs:sequence><xs:attribute
+        name="id" type="xs:string"/></xs:complexType><xs:complexType name="GerarNovaNfseResposta"><xs:sequence><xs:choice
+        minOccurs="1" maxOccurs="1"><xs:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno"><xs:complexType><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/></xs:sequence></xs:complexType></xs:element><xs:element
+        minOccurs="0" maxOccurs="1" name="NovaNfse" type="tns:tcRespostaIdentNovaNfse"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="tcRespostaIdentNovaNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="IdentificacaoNfse" type="tns:tcIdentNovaNfse"/><xs:element minOccurs="0"
+        maxOccurs="1" ref="q8:Signature" xmlns:q8="http://www.w3.org/2000/09/xmldsig#"/></xs:sequence></xs:complexType><xs:complexType
+        name="tcIdentNovaNfse"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="IdentificacaoPrestador" type="tns:tcIdentificacaoPrestador"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Numero" type="xs:nonNegativeInteger"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Serie" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="CodigoVerificacao" type="xs:string"/><xs:element minOccurs="1"
+        maxOccurs="1" name="DataEmissao" type="xs:dateTime"/><xs:element minOccurs="0"
+        maxOccurs="1" name="Link" type="xs:string"/></xs:sequence><xs:attribute name="id"
+        type="xs:string"/></xs:complexType></xs:schema><xs:schema elementFormDefault="qualified"
+        targetNamespace="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://www.w3.org/2000/09/xmldsig#"><xs:element name="Signature"
+        type="tns:SignatureType"/><xs:complexType name="SignatureType"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="SignedInfo" type="tns:SignedInfoType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="SignatureValue" type="tns:SignatureValueType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="KeyInfo" type="tns:KeyInfoType"/><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="Object" type="tns:ObjectType"/></xs:sequence><xs:attribute
+        name="Id" type="xs:ID"/></xs:complexType><xs:complexType name="SignedInfoType"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="CanonicalizationMethod" type="tns:CanonicalizationMethodType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="SignatureMethod" type="tns:SignatureMethodType"/><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="Reference" type="tns:ReferenceType"/></xs:sequence><xs:attribute
+        name="Id" type="xs:ID"/></xs:complexType><xs:complexType name="CanonicalizationMethodType"
+        mixed="true"><xs:sequence><xs:any minOccurs="0" maxOccurs="unbounded"/></xs:sequence><xs:attribute
+        name="Algorithm" type="xs:anyURI"/></xs:complexType><xs:complexType name="SignatureMethodType"
+        mixed="true"><xs:sequence><xs:element minOccurs="0" maxOccurs="1" name="HMACOutputLength"
+        type="xs:integer"/><xs:any minOccurs="0" maxOccurs="unbounded"/></xs:sequence><xs:attribute
+        name="Algorithm" type="xs:anyURI"/></xs:complexType><xs:complexType name="ReferenceType"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="1" name="Transforms" type="tns:ArrayOfTransformType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="DigestMethod" type="tns:DigestMethodType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="DigestValue" type="xs:base64Binary"/></xs:sequence><xs:attribute
+        name="Id" type="xs:ID"/><xs:attribute name="URI" type="xs:anyURI"/><xs:attribute
+        name="Type" type="xs:anyURI"/></xs:complexType><xs:complexType name="ArrayOfTransformType"><xs:sequence><xs:element
+        minOccurs="0" maxOccurs="unbounded" name="Transform" type="tns:TransformType"/></xs:sequence></xs:complexType><xs:complexType
+        name="TransformType" mixed="true"><xs:sequence><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        minOccurs="0" maxOccurs="1" name="XPath" type="xs:string"/><xs:any minOccurs="0"
+        maxOccurs="1"/></xs:choice></xs:sequence><xs:attribute name="Algorithm" type="xs:anyURI"/></xs:complexType><xs:complexType
+        name="DigestMethodType" mixed="true"><xs:sequence><xs:any minOccurs="0" maxOccurs="unbounded"/></xs:sequence><xs:attribute
+        name="Algorithm" type="xs:anyURI"/></xs:complexType><xs:complexType name="SignatureValueType"><xs:simpleContent><xs:extension
+        base="xs:base64Binary"><xs:attribute name="Id" type="xs:ID"/></xs:extension></xs:simpleContent></xs:complexType><xs:complexType
+        name="KeyInfoType" mixed="true"><xs:sequence><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        minOccurs="0" maxOccurs="1" name="KeyName" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="KeyValue" type="tns:KeyValueType"/><xs:element minOccurs="0"
+        maxOccurs="1" name="MgmtData" type="xs:string"/><xs:element minOccurs="0"
+        maxOccurs="1" name="PGPData" type="tns:PGPDataType"/><xs:element minOccurs="0"
+        maxOccurs="1" name="RetrievalMethod" type="tns:RetrievalMethodType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="SPKIData" type="tns:SPKIDataType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="X509Data" type="tns:X509DataType"/><xs:any
+        minOccurs="0" maxOccurs="1"/></xs:choice></xs:sequence><xs:attribute name="Id"
+        type="xs:ID"/></xs:complexType><xs:complexType name="KeyValueType" mixed="true"><xs:sequence><xs:choice
+        minOccurs="1" maxOccurs="1"><xs:element minOccurs="0" maxOccurs="1" name="DSAKeyValue"
+        type="tns:DSAKeyValueType"/><xs:element minOccurs="0" maxOccurs="1" name="RSAKeyValue"
+        type="tns:RSAKeyValueType"/><xs:any minOccurs="0" maxOccurs="1"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="DSAKeyValueType"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="P" type="xs:base64Binary"/><xs:element minOccurs="0" maxOccurs="1" name="Q"
+        type="xs:base64Binary"/><xs:element minOccurs="0" maxOccurs="1" name="G" type="xs:base64Binary"/><xs:element
+        minOccurs="0" maxOccurs="1" name="Y" type="xs:base64Binary"/><xs:element minOccurs="0"
+        maxOccurs="1" name="J" type="xs:base64Binary"/><xs:element minOccurs="0" maxOccurs="1"
+        name="Seed" type="xs:base64Binary"/><xs:element minOccurs="0" maxOccurs="1"
+        name="PgenCounter" type="xs:base64Binary"/></xs:sequence></xs:complexType><xs:complexType
+        name="RSAKeyValueType"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Modulus" type="xs:base64Binary"/><xs:element minOccurs="0" maxOccurs="1"
+        name="Exponent" type="xs:base64Binary"/></xs:sequence></xs:complexType><xs:complexType
+        name="PGPDataType"><xs:sequence><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        minOccurs="0" maxOccurs="1" name="PGPKeyID" type="xs:base64Binary"/><xs:element
+        minOccurs="0" maxOccurs="1" name="PGPKeyPacket" type="xs:base64Binary"/><xs:any
+        minOccurs="0" maxOccurs="1"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="RetrievalMethodType"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="Transforms" type="tns:ArrayOfTransformType"/></xs:sequence><xs:attribute
+        name="URI" type="xs:anyURI"/><xs:attribute name="Type" type="xs:anyURI"/></xs:complexType><xs:complexType
+        name="SPKIDataType"><xs:sequence><xs:element minOccurs="0" maxOccurs="unbounded"
+        name="SPKISexp" type="xs:base64Binary"/><xs:any minOccurs="0" maxOccurs="1"/></xs:sequence></xs:complexType><xs:complexType
+        name="X509DataType"><xs:sequence><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        minOccurs="0" maxOccurs="1" name="X509CRL" type="xs:base64Binary"/><xs:element
+        minOccurs="0" maxOccurs="1" name="X509Certificate" type="xs:base64Binary"/><xs:element
+        minOccurs="0" maxOccurs="1" name="X509IssuerSerial" type="tns:X509IssuerSerialType"/><xs:element
+        minOccurs="0" maxOccurs="1" name="X509SKI" type="xs:base64Binary"/><xs:element
+        minOccurs="0" maxOccurs="1" name="X509SubjectName" type="xs:string"/><xs:any
+        minOccurs="0" maxOccurs="1"/></xs:choice></xs:sequence></xs:complexType><xs:complexType
+        name="X509IssuerSerialType"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="X509IssuerName" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1"
+        name="X509SerialNumber" type="xs:integer"/></xs:sequence></xs:complexType><xs:complexType
+        name="ObjectType" mixed="true"><xs:sequence><xs:any minOccurs="0" maxOccurs="unbounded"/></xs:sequence><xs:attribute
+        name="Id" type="xs:ID"/><xs:attribute name="MimeType" type="xs:string"/><xs:attribute
+        name="Encoding" type="xs:anyURI"/></xs:complexType></xs:schema><xs:schema
+        elementFormDefault="qualified" targetNamespace="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.sistema.com.br/Sistema.Ws.Nfse.Cn"><xs:complexType
+        name="ddDuasStrings"><xs:sequence><xs:element minOccurs="0" maxOccurs="1"
+        name="P1" type="xs:string"/><xs:element minOccurs="0" maxOccurs="1" name="P2"
+        type="xs:string"/></xs:sequence></xs:complexType></xs:schema></wsdl:types><wsdl:message
+        name="INfseService_Versao_InputMessage"><wsdl:part name="parameters" element="tns:Versao"/></wsdl:message><wsdl:message
+        name="INfseService_Versao_OutputMessage"><wsdl:part name="parameters" element="tns:VersaoResponse"/></wsdl:message><wsdl:message
+        name="INfseService_RecepcionarLoteRps_InputMessage"><wsdl:part name="parameters"
+        element="tns:RecepcionarLoteRps"/></wsdl:message><wsdl:message name="INfseService_RecepcionarLoteRps_OutputMessage"><wsdl:part
+        name="parameters" element="tns:RecepcionarLoteRpsResponse"/></wsdl:message><wsdl:message
+        name="INfseService_ConsultarSituacaoLoteRps_InputMessage"><wsdl:part name="parameters"
+        element="tns:ConsultarSituacaoLoteRps"/></wsdl:message><wsdl:message name="INfseService_ConsultarSituacaoLoteRps_OutputMessage"><wsdl:part
+        name="parameters" element="tns:ConsultarSituacaoLoteRpsResponse"/></wsdl:message><wsdl:message
+        name="INfseService_ConsultarNfsePorRps_InputMessage"><wsdl:part name="parameters"
+        element="tns:ConsultarNfsePorRps"/></wsdl:message><wsdl:message name="INfseService_ConsultarNfsePorRps_OutputMessage"><wsdl:part
+        name="parameters" element="tns:ConsultarNfsePorRpsResponse"/></wsdl:message><wsdl:message
+        name="INfseService_ConsultarNfse_InputMessage"><wsdl:part name="parameters"
+        element="tns:ConsultarNfse"/></wsdl:message><wsdl:message name="INfseService_ConsultarNfse_OutputMessage"><wsdl:part
+        name="parameters" element="tns:ConsultarNfseResponse"/></wsdl:message><wsdl:message
+        name="INfseService_ConsultarLoteRps_InputMessage"><wsdl:part name="parameters"
+        element="tns:ConsultarLoteRps"/></wsdl:message><wsdl:message name="INfseService_ConsultarLoteRps_OutputMessage"><wsdl:part
+        name="parameters" element="tns:ConsultarLoteRpsResponse"/></wsdl:message><wsdl:message
+        name="INfseService_CancelarNfse_InputMessage"><wsdl:part name="parameters"
+        element="tns:CancelarNfse"/></wsdl:message><wsdl:message name="INfseService_CancelarNfse_OutputMessage"><wsdl:part
+        name="parameters" element="tns:CancelarNfseResponse"/></wsdl:message><wsdl:message
+        name="INfseService_GerarNfse_InputMessage"><wsdl:part name="parameters" element="tns:GerarNfse"/></wsdl:message><wsdl:message
+        name="INfseService_GerarNfse_OutputMessage"><wsdl:part name="parameters" element="tns:GerarNfseResponse"/></wsdl:message><wsdl:portType
+        name="INfseService"><wsdl:operation name="Versao"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/Versao"
+        message="tns:INfseService_Versao_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/VersaoResponse"
+        message="tns:INfseService_Versao_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="RecepcionarLoteRps"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRps"
+        message="tns:INfseService_RecepcionarLoteRps_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRpsResponse"
+        message="tns:INfseService_RecepcionarLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="ConsultarSituacaoLoteRps"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarSituacaoLoteRps"
+        message="tns:INfseService_ConsultarSituacaoLoteRps_InputMessage"/><wsdl:output
+        wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarSituacaoLoteRpsResponse"
+        message="tns:INfseService_ConsultarSituacaoLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="ConsultarNfsePorRps"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfsePorRps"
+        message="tns:INfseService_ConsultarNfsePorRps_InputMessage"/><wsdl:output
+        wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfsePorRpsResponse"
+        message="tns:INfseService_ConsultarNfsePorRps_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="ConsultarNfse"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfse"
+        message="tns:INfseService_ConsultarNfse_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfseResponse"
+        message="tns:INfseService_ConsultarNfse_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="ConsultarLoteRps"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRps"
+        message="tns:INfseService_ConsultarLoteRps_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRpsResponse"
+        message="tns:INfseService_ConsultarLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="CancelarNfse"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfse"
+        message="tns:INfseService_CancelarNfse_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfseResponse"
+        message="tns:INfseService_CancelarNfse_OutputMessage"/></wsdl:operation><wsdl:operation
+        name="GerarNfse"><wsdl:input wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfse"
+        message="tns:INfseService_GerarNfse_InputMessage"/><wsdl:output wsaw:Action="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfseResponse"
+        message="tns:INfseService_GerarNfse_OutputMessage"/></wsdl:operation></wsdl:portType><wsdl:binding
+        name="BasicHttpBinding_INfseService" type="tns:INfseService"><soap:binding
+        transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation name="Versao"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/Versao"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="RecepcionarLoteRps"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/RecepcionarLoteRps"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarSituacaoLoteRps"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarSituacaoLoteRps"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarNfsePorRps"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfsePorRps"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarNfse"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarNfse"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarLoteRps"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/ConsultarLoteRps"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="CancelarNfse"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/CancelarNfse"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="GerarNfse"><soap:operation
+        soapAction="http://www.sistema.com.br/Sistema.Ws.Nfse/INfseService/GerarNfse"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service
+        name="NfseService"><wsdl:port name="BasicHttpBinding_INfseService" binding="tns:BasicHttpBinding_INfseService"><soap:address
+        location="http://wshomologacao.simplissweb.com.br/nfseservice.svc"/></wsdl:port></wsdl:service></wsdl:definitions>
+    headers:
+      Content-Length:
+      - '43564'
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:39 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      Set-Cookie:
+      - BIGipServer=218171914.20480.0000; path=/
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Zeep/4.0.0 (www.python-zeep.org)
+    method: GET
+    uri: https://isseteste.maringa.pr.gov.br/ws/?wsdl
+  response:
+    body:
+      string: '<?xml version="1.0"?>
+
+        <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="https://isseteste.maringa.pr.gov.br/ws/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        name="NfseServices" targetNamespace="https://isseteste.maringa.pr.gov.br/ws/"><types><xsd:schema
+        targetNamespace="https://isseteste.maringa.pr.gov.br/ws/"/></types><portType
+        name="NfseServicesPort"><operation name="EnviarLoteRps"><documentation>Envia
+        lote de RPS para converter em NFS-e</documentation><input message="tns:EnviarLoteRpsIn"/><output
+        message="tns:EnviarLoteRpsOut"/></operation><operation name="EnviarLoteDeducaoSincrono"><documentation>Envia
+        lote de Notas para dedu&#xE7;&#xE3;o da base de c&#xE1;lculo.</documentation><input
+        message="tns:EnviarLoteDeducaoSincronoIn"/><output message="tns:EnviarLoteDeducaoSincronoOut"/></operation><operation
+        name="EnviarLoteRpsSincrono"><documentation>Envia lote de RPS e converte em
+        NFS-e</documentation><input message="tns:EnviarLoteRpsSincronoIn"/><output
+        message="tns:EnviarLoteRpsSincronoOut"/></operation><operation name="GerarNfse"><documentation>Envia
+        um RPS para converter em NFS-e</documentation><input message="tns:GerarNfseIn"/><output
+        message="tns:GerarNfseOut"/></operation><operation name="CancelarNfse"><documentation>Cancela
+        uma Nfs-e</documentation><input message="tns:CancelarNfseIn"/><output message="tns:CancelarNfseOut"/></operation><operation
+        name="SubstituirNfse"><documentation>Substituir uma NFS-e</documentation><input
+        message="tns:SubstituirNfseIn"/><output message="tns:SubstituirNfseOut"/></operation><operation
+        name="ConsultarLoteRps"><documentation>Consulto o lote de NFS-e</documentation><input
+        message="tns:ConsultarLoteRpsIn"/><output message="tns:ConsultarLoteRpsOut"/></operation><operation
+        name="ConsultarNfseRps"><documentation>Consulta NFS-e por RPS</documentation><input
+        message="tns:ConsultarNfseRpsIn"/><output message="tns:ConsultarNfseRpsOut"/></operation><operation
+        name="ConsultarNfseServicoPrestado"><documentation>Consultar a lista de NFS-e
+        Servicos Prestados</documentation><input message="tns:ConsultarNfseServicoPrestadoIn"/><output
+        message="tns:ConsultarNfseServicoPrestadoOut"/></operation><operation name="ConsultarNfseServicoTomado"><documentation>Consultar
+        a lista de NFS-e Servicos Tomados</documentation><input message="tns:ConsultarNfseServicoTomadoIn"/><output
+        message="tns:ConsultarNfseServicoTomadoOut"/></operation><operation name="ConsultarNfseFaixa"><documentation>Consultar
+        a lista de NFS-e por faixa</documentation><input message="tns:ConsultarNfseFaixaIn"/><output
+        message="tns:ConsultarNfseFaixaOut"/></operation><operation name="ValidarXml"><documentation>Valida
+        um XML</documentation><input message="tns:ValidarXmlIn"/><output message="tns:ValidarXmlOut"/></operation><operation
+        name="Teste"><documentation>Teste</documentation><input message="tns:TesteIn"/><output
+        message="tns:TesteOut"/></operation></portType><binding name="NfseServicesBinding"
+        type="tns:NfseServicesPort"><soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/><operation
+        name="EnviarLoteRps"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#EnviarLoteRps"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="EnviarLoteDeducaoSincrono"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#EnviarLoteDeducaoSincrono"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="EnviarLoteRpsSincrono"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#EnviarLoteRpsSincrono"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="GerarNfse"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#GerarNfse"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="CancelarNfse"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#CancelarNfse"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="SubstituirNfse"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#SubstituirNfse"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ConsultarLoteRps"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ConsultarLoteRps"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ConsultarNfseRps"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ConsultarNfseRps"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ConsultarNfseServicoPrestado"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ConsultarNfseServicoPrestado"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ConsultarNfseServicoTomado"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ConsultarNfseServicoTomado"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ConsultarNfseFaixa"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ConsultarNfseFaixa"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="ValidarXml"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#ValidarXml"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation><operation
+        name="Teste"><soap:operation soapAction="https://isseteste.maringa.pr.gov.br/ws/#Teste"/><input><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></input><output><soap:body
+        use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="https://isseteste.maringa.pr.gov.br/ws/"/></output></operation></binding><service
+        name="NfseServicesService"><port name="NfseServicesPort" binding="tns:NfseServicesBinding"><soap:address
+        location="https://isseteste.maringa.pr.gov.br/ws/"/></port></service><message
+        name="EnviarLoteRpsIn"><part name="xml" type="xsd:string"/></message><message
+        name="EnviarLoteRpsOut"><part name="return" type="xsd:string"/></message><message
+        name="EnviarLoteDeducaoSincronoIn"><part name="xml" type="xsd:string"/></message><message
+        name="EnviarLoteDeducaoSincronoOut"><part name="return" type="xsd:string"/></message><message
+        name="EnviarLoteRpsSincronoIn"><part name="xml" type="xsd:string"/></message><message
+        name="EnviarLoteRpsSincronoOut"><part name="return" type="xsd:string"/></message><message
+        name="GerarNfseIn"><part name="xml" type="xsd:string"/></message><message
+        name="GerarNfseOut"><part name="return" type="xsd:string"/></message><message
+        name="CancelarNfseIn"><part name="xml" type="xsd:string"/></message><message
+        name="CancelarNfseOut"><part name="return" type="xsd:string"/></message><message
+        name="SubstituirNfseIn"><part name="xml" type="xsd:string"/></message><message
+        name="SubstituirNfseOut"><part name="return" type="xsd:string"/></message><message
+        name="ConsultarLoteRpsIn"><part name="xml" type="xsd:string"/></message><message
+        name="ConsultarLoteRpsOut"><part name="return" type="xsd:string"/></message><message
+        name="ConsultarNfseRpsIn"><part name="xml" type="xsd:string"/></message><message
+        name="ConsultarNfseRpsOut"><part name="return" type="xsd:string"/></message><message
+        name="ConsultarNfseServicoPrestadoIn"><part name="xml" type="xsd:string"/></message><message
+        name="ConsultarNfseServicoPrestadoOut"><part name="return" type="xsd:string"/></message><message
+        name="ConsultarNfseServicoTomadoIn"><part name="xml" type="xsd:string"/></message><message
+        name="ConsultarNfseServicoTomadoOut"><part name="return" type="xsd:string"/></message><message
+        name="ConsultarNfseFaixaIn"><part name="xml" type="xsd:string"/></message><message
+        name="ConsultarNfseFaixaOut"><part name="return" type="xsd:string"/></message><message
+        name="ValidarXmlIn"><part name="xml" type="xsd:string"/></message><message
+        name="ValidarXmlOut"><part name="return" type="xsd:anyType"/></message><message
+        name="TesteIn"><part name="xml" type="xsd:string"/></message><message name="TesteOut"><part
+        name="return" type="xsd:anyType"/></message></definitions>
+
+        '
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Content-Type, Origin, Authorization, Accept, Accept-Encoding,
+        If-Modified-Since, access-token, expiry, token-type, uid, client, client_name,
+        client_os
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PUT, PATCH, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - access-token, expiry, token-type, uid, client, client_name, client_os
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Connection:
+      - close
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:54 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.2.15 (Red Hat)
+      Service-Worker-Allowed:
+      - /
+      Set-Cookie:
+      - bec478f8ad0eef0564ba9220754b42c4=o6v1qn9i8pu6gebmkecatqtcn1; path=/
+      Transfer-Encoding:
+      - chunked
+      X-Powered-By:
+      - PHP/5.6.30
+    status:
+      code: 200
+      message: OK
+version: 1

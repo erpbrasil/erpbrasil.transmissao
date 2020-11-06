@@ -4,6 +4,7 @@ import collections
 import os
 from unittest import TestCase
 
+import vcr
 from erpbrasil.assinatura.certificado import Certificado
 from requests import Session
 
@@ -65,6 +66,11 @@ mdfe = Requisicao(
     True,
 )
 
+vcr_cassettes_path = os.environ.get(
+    'vcr_cassettes_path',
+    'fixtures/vcr_cassettes'
+)
+
 
 class Tests(TestCase):
     """ Rodar este teste muitas vezes pode bloquear o seu IP"""
@@ -85,6 +91,8 @@ class Tests(TestCase):
         session.verify = False
         self.transmissao = TransmissaoSOAP(self.certificado, session)
 
+    @vcr.use_cassette(
+        vcr_cassettes_path + '/test_erpbrasil_soap_xml/test_nfe.yaml')
     def test_nfe(self):
         with self.transmissao.cliente(nfe.url):
             resposta = self.transmissao.enviar(
@@ -93,6 +101,8 @@ class Tests(TestCase):
             self.assertTrue(resposta.ok)
             print(resposta.text)
 
+    @vcr.use_cassette(
+        vcr_cassettes_path + '/test_erpbrasil_soap_xml/test_cte.yaml')
     def test_cte(self):
         with self.transmissao.cliente(cte.url):
             self.transmissao.set_header(
@@ -106,6 +116,8 @@ class Tests(TestCase):
             self.assertTrue(resposta.ok)
             print(resposta.text)
 
+    @vcr.use_cassette(
+        vcr_cassettes_path + '/test_erpbrasil_soap_xml/test_gnre.yaml')
     def test_gnre(self):
         # Esse teste esta muito complicado, devido aos certificados defeituosos
         # do servidor,
@@ -138,6 +150,8 @@ class Tests(TestCase):
         #     self.assertTrue(resposta.ok)
         #     print(resposta.text)
 
+    @vcr.use_cassette(
+        vcr_cassettes_path + '/test_erpbrasil_soap_xml/test_mdfe.yaml')
     def test_mdfe(self):
         with self.transmissao.cliente(mdfe.url):
             self.transmissao.set_header(
