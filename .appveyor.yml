@@ -36,8 +36,7 @@ init:
   - ps: ls C:\Python*
 install:
   - python -u ci\appveyor-bootstrap.py
-  - 'SET PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%'
-  - python -m pip install --upgrade pip
+  - python -m pip install -U pip
   - '%PYTHON_HOME%\Scripts\virtualenv --version'
   - '%PYTHON_HOME%\Scripts\easy_install --version'
   - '%PYTHON_HOME%\Scripts\pip --version'
