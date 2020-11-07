@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: scope=readonly&grant_type=client_credentials&client_id=B0RKj1UmUV-M0&client_secret=8YrXLEMP0G_HIyM43RsOOez-stj50j3co_uUBq
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '121'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://oauth.itau.com.br/identity/connect/token
+  response:
+    body:
+      string: '{"error":"invalid_client"}'
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '26'
+      Content-Security-Policy:
+      - script-src * 'unsafe-inline' 'unsafe-eval';style-src * 'unsafe-inline' 'unsafe-eval';img-src
+        * 'unsafe-inline' 'unsafe-eval'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2020 13:10:28 GMT
+      Set-Cookie:
+      - TS01f0d093=01ca9250c715aaf2d58fbcc6e4b0a4ceea54967caf50c8fb865b829e1d90aa11a610b8ed0e5feb8e0e0ce38503753045639918bd19;
+        Path=/
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 400
+      message: Bad Request
+version: 1
