@@ -58,7 +58,29 @@ Overview
 
 .. end-badges
 
-Infraestrutura de transmissao de documentos eletronicos
+Infraestrutura de transmissao de documentos eletronicos em Python
+
+* Transmissão de SOAP-XML e HTTP com certificado digital de maneira segura e prática.
+
+Documentação
+============
+
+https://erpbrasil.github.io/
+
+Créditos
+========
+
+Esta é uma biblioteca criada atravês do esforço de das empresas:
+
+* Akretion https://akretion.com/pt-BR/
+* KMEE https://www.kmee.com.br
+
+Parte do código foi extraido da localização brasileira do Odoo: https://github.com/oca/l10n-brazil/ favor consultar a lista de contribuidores:
+
+https://github.com/erpbrasil/erpbrasil.base/graphs/contributors
+
+Licença
+~~~~~~~
 
 * Free software: MIT license
 
