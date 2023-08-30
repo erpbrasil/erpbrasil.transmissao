@@ -39,9 +39,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/erpbrasil.transmissao
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/erpbrasil/erpbrasil.transmissao/v1.0.0..svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/erpbrasil/erpbrasil.transmissao/v1.1.0..svg
     :alt: Commits since latest release
-    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v1.0.0...master
+    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v1.1.0...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/erpbrasil.transmissao.svg
     :alt: PyPI Wheel
