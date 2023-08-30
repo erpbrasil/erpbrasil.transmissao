@@ -16,6 +16,10 @@ from zeep import Client
 from zeep.cache import SqliteCache
 from zeep.transports import Transport
 
+from ..monkey_patch.zeep_monkey_patch import apply_zeep_monkey_patches
+
+apply_zeep_monkey_patches()
+
 ABC = abc.ABCMeta('ABC', (object,), {})
 
 
