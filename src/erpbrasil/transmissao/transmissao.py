@@ -7,7 +7,6 @@ import tempfile
 from contextlib import contextmanager
 
 import requests
-from erpbrasil.assinatura.certificado import ArquivoCertificado
 from lxml import etree
 from requests import Session
 from requests.auth import HTTPBasicAuth
@@ -16,11 +15,13 @@ from zeep import Client
 from zeep.cache import SqliteCache
 from zeep.transports import Transport
 
-from ..monkey_patch.zeep_monkey_patch import apply_zeep_monkey_patches
+from erpbrasil.assinatura.certificado import ArquivoCertificado
+
+from .monkey_patch.zeep_monkey_patch import apply_zeep_monkey_patches
 
 apply_zeep_monkey_patches()
 
-ABC = abc.ABCMeta('ABC', (object,), {})
+ABC = abc.ABCMeta("ABC", (object,), {})
 
 
 class Transmissao(ABC):
@@ -39,9 +40,7 @@ class Transmissao(ABC):
 
 
 class TransmissaoSOAP(Transmissao):
-
-    def __init__(self, certificado, session=Session(), cache=True,
-                 disable_warnings=True, raw_response=True):
+    def __init__(self, certificado, session=Session(), cache=True, disable_warnings=True, raw_response=True):
         """
         :param certificado: erpbrasil.assinatura.certificado
         :param cache: O cache torna as requisições mais rápidas entretanto,
@@ -57,35 +56,28 @@ class TransmissaoSOAP(Transmissao):
     @staticmethod
     def get_cache():
         temp_dir = tempfile.gettempdir()
-        cache_file = os.path.join(temp_dir, 'erpbrasil_transmissao.db')
+        cache_file = os.path.join(temp_dir, "erpbrasil_transmissao.db")
         return SqliteCache(path=cache_file, timeout=60)
 
     def desativar_avisos(self):
         if self._disable_warnings:
-            requests.packages.urllib3.disable_warnings(
-                InsecureRequestWarning
-            )
+            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
     @contextmanager
     def cliente(self, url, verify=False, service_name=None, port_name=None):
-        with ArquivoCertificado(self.certificado, 'w') as (key, cert):
+        with ArquivoCertificado(self.certificado, "w") as (key, cert):
             self.desativar_avisos()
             session = Session()
             session.cert = (key, cert)
             session.verify = verify
             transport = Transport(session=session, cache=self._cache)
-            self._cliente = Client(
-                url, transport=transport, service_name=service_name,
-                port_name=port_name
-            )
+            self._cliente = Client(url, transport=transport, service_name=service_name, port_name=port_name)
             yield self._cliente
             self._cliente = False
 
     def interpretar_mensagem(self, mensagem):
-        if type(mensagem) == str:
-            return etree.fromstring(mensagem, parser=etree.XMLParser(
-                remove_blank_text=True
-            ))
+        if isinstance(mensagem, str):
+            return etree.fromstring(mensagem, parser=etree.XMLParser(remove_blank_text=True))
         return mensagem
 
     def set_header(self, elemento, **kwargs):
@@ -95,13 +87,10 @@ class TransmissaoSOAP(Transmissao):
 
     def enviar(self, operacao, mensagem):
         with self._cliente.settings(raw_response=self.raw_response):
-            return self._cliente.service[operacao](
-                self.interpretar_mensagem(mensagem)
-            )
+            return self._cliente.service[operacao](self.interpretar_mensagem(mensagem))
 
 
 class TransmissaoHTTP(Transmissao):
-
     def enviar(self):
         pass
 

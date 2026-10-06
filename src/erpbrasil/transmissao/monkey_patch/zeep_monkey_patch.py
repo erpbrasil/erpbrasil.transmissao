@@ -1,6 +1,7 @@
 from lxml import etree
 from zeep import xsd
 
+
 # Monkey patch relacionado a este PR: https://github.com/mvantellingen/python-zeep/pull/1384
 #
 # Foi necessário essa alteração devido ao fato da biblioteca "Zeep" não fornecer o tratamento
