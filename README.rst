@@ -10,8 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
-        | |codecov|
+      - | |tests| |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
@@ -19,17 +18,9 @@ Overview
     :target: https://readthedocs.org/projects/erpbrasiltransmissao
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.org/erpbrasil/erpbrasil.transmissao.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/erpbrasil/erpbrasil.transmissao
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/erpbrasil/erpbrasil.transmissao?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/erpbrasil/erpbrasil.transmissao
-
-.. |requires| image:: https://requires.io/github/erpbrasil/erpbrasil.transmissao/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/erpbrasil/erpbrasil.transmissao/requirements/?branch=master
+.. |tests| image:: https://github.com/erpbrasil/erpbrasil.transmissao/actions/workflows/tests.yml/badge.svg?branch=master
+    :alt: Tests
+    :target: https://github.com/erpbrasil/erpbrasil.transmissao/actions/workflows/tests.yml
 
 .. |codecov| image:: https://codecov.io/gh/erpbrasil/erpbrasil.transmissao/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
@@ -39,9 +30,9 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/erpbrasil.transmissao
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/erpbrasil/erpbrasil.transmissao/v1.1.0..svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/erpbrasil/erpbrasil.transmissao/v1.2.0..svg
     :alt: Commits since latest release
-    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v1.1.0...master
+    :target: https://github.com/erpbrasil/erpbrasil.transmissao/compare/v1.2.0...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/erpbrasil.transmissao.svg
     :alt: PyPI Wheel

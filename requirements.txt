@@ -1,3 +1,0 @@
-erpbrasil.assinatura
-zeep; python_version > '3.4'
-zeep==3.4.0; python_version == '3.4'
